@@ -20,3 +20,14 @@ D:\部活\チーム制作（２０１６年６月）\Zombie - コピー\Zombie\Z
 D:\部活\チーム制作（２０１６年６月）\Zombie - コピー\Zombie\Zombie\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 D:\部活\チーム制作（２０１６年６月）\Zombie - コピー\Zombie\Zombie\obj\x86\Debug\Zombie.exe
 D:\部活\チーム制作（２０１６年６月）\Zombie - コピー\Zombie\Zombie\obj\x86\Debug\Zombie.pdb
+D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\player.xnb
+D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\enemy.xnb
+D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\life.xnb
+D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\block.xnb
+D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\beam.xnb
+D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Zombie.exe
+D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Zombie.pdb
+D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\obj\x86\Debug\Zombie.csprojResolveAssemblyReference.cache
+D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\obj\x86\Debug\Zombie.exe
+D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\obj\x86\Debug\Zombie.pdb
