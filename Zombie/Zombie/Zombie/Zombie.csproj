@@ -108,19 +108,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BoxCollider.cs" />
+    <Compile Include="Active\Beam.cs" />
     <Compile Include="Sceen\Block.cs" />
     <Compile Include="Active\Character.cs" />
     <Compile Include="Device\InputState.cs" />
     <Compile Include="Device\IsCollision.cs" />
     <Compile Include="Active\EnemyA.cs" />
-    <Compile Include="Sceen\Floor.cs" />
     <Compile Include="Active\Player.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="Device\Renderer.cs" />
-    <Compile Include="Screen.cs" />
+    <Compile Include="Fed\Screen.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Game.ico" />

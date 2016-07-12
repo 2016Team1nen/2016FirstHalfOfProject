@@ -9,6 +9,9 @@ namespace Zombie
 {
     class InputState
     {
+        private KeyboardState currentKey;
+        private KeyboardState previousKey;
+        private int checkRF;
 
         public InputState() { }
 
@@ -28,7 +31,33 @@ namespace Zombie
             return velocity;
         }
 
-        
+        //向きチェック right=1,left=-1
+        public int CheckRF(KeyboardState keyState)
+        {
+            if (keyState.IsKeyDown(Keys.D)) {
+                checkRF = 1;
+            }
+            if (keyState.IsKeyDown(Keys.A))
+            {
+                checkRF = -1;
+            }
+            return checkRF;
+        }
+
+
+        //Keyの状態をチェックするメソッド
+        public void UpdateKey(KeyboardState keyState)
+        {
+            previousKey = currentKey;
+            currentKey = keyState;
+        }
+        public bool IsKeyDown(Keys key)
+        {
+            bool current = currentKey.IsKeyDown(key);
+            bool previous = previousKey.IsKeyDown(key);
+            return current && !previous;
+        }
+
 
 
     }

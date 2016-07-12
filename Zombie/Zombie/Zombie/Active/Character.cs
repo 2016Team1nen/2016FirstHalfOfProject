@@ -15,9 +15,7 @@ namespace Zombie
         protected Vector2 velocity;
         protected Vector2 size;
 
-        protected Vector2 previous;
-        protected Vector2 current;
-
+        
         public Character(string name, int hp, Vector2 position, Vector2 size, Vector2 velocity)
         {
             this.name = name;
@@ -27,39 +25,21 @@ namespace Zombie
             this.size = size;
         }
 
-        protected abstract void Move();
-        public abstract void Update();
-
-
-        //check方向
-        public Vector2 IsDirection()
+        protected void Falling()  
         {
-            previous = current;
-            current = position;
-
-            return current - previous;
-        }
-
-        public void Falling()  
-        {
-            velocity.Y += 1;
+            velocity.Y += 0.5f;
             position.Y += velocity.Y;
-            
         }
 
 
         public void IsFloor(Vector2 floorPosition, Vector2 fSize, bool isFloor) {
-            Vector2 direction = IsDirection();
-
-
             //左から行く(○)
             if (isFloor && position.X < floorPosition.X &&
                 position.Y <= (floorPosition + fSize).Y - 2 &&
                 position.Y >= floorPosition.Y + 2)
             {
-                position.X = (floorPosition - size).X;
+                position.X = (floorPosition - size).X - 1;
             }
-
 
             //右から行く(○)
             if (isFloor && (position + size).X > (floorPosition + fSize).X &&
@@ -88,6 +68,16 @@ namespace Zombie
         }
 
 
+        public void IsEnemy(Vector2 enemyPosition)
+        {
+            if (position.X > enemyPosition.X) {
+                position.X += 150;
+            }
+
+            else {
+                position.X -= 150;
+            }
+        }
 
         public bool IsDeath()
         {
@@ -153,12 +143,18 @@ namespace Zombie
             renderer.DrawTexture(name, position);
         }
 
+        public void Draw(Renderer renderer, int rf)
+        {
+            renderer.DrawTexture(name, position, rf);
+        }
 
         //RefPosition
         public void SetPosition(ref Vector2 other)
         {
             other = position;
         }
+
+        public abstract void Update();
 
     }
 }

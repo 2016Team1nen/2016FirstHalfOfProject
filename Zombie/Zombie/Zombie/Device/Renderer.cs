@@ -48,6 +48,23 @@ namespace Zombie
             spriteBatch.Draw(textures[name], position, Color.White * alpha);
         }
 
+        public void DrawTexture(string name, Vector2 position, int rf, float alpha = 1.0f)
+        {
+            if (rf == -1)
+            {
+                spriteBatch.Draw(textures[name], position,
+                    new Rectangle(64,0,64,64),
+                    Color.White * alpha);
+            }
+            else {
+                spriteBatch.Draw(textures[name], position,
+                    new Rectangle(0, 0, 64, 64),
+                    Color.White * alpha);
+            }
+        }
+
+
+
         public void DrawNumber(Character chara, int life, float alpha = 1.0f)
         {
 

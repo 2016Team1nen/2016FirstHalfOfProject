@@ -9,7 +9,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 using Zombie.Device;
-
+using Zombie.Active;
 
 namespace Zombie
 {
@@ -18,19 +18,21 @@ namespace Zombie
         private GraphicsDeviceManager graphics;
 
         private Character player;
-        private Floor floor;
+
         private Block block;
 
         private Renderer renderer;
 
         private IsCollision isCollision;
 
-        Dictionary<string, Texture2D> textures;
+        private Dictionary<string, Texture2D> textures;
 
-        Dictionary<string, Character> enemy;
+        private Dictionary<string, Character> enemy;
+        private List<Character> beamR;
+        private List<Character> beamL;
+        private List<Block> blockG;
 
-        List<Floor> floorG;
-        List<Block> blockG;
+        private InputState input;
 
         public Game1()
         {
@@ -50,11 +52,12 @@ namespace Zombie
 
             player = new Player("player", 3, new Vector2(0, Screen.screenHeight - 64 * 2), new Vector2(64, 64), Vector2.Zero);
             enemy = new Dictionary<string, Character>(){
-                {"A",new EnemyA("enemy", 1, new Vector2(700, Screen.screenHeight - 64 * 2), new Vector2(64, 64), new Vector2(-5, 0))}
+                {"A",new EnemyA("enemy", 1, new Vector2(700, Screen.screenHeight - 64 * 3), new Vector2(64, 64), new Vector2(-5, 0))}
             };
 
-            floor = new Floor("block", Vector2.Zero, new Vector2(192, 64));
-            floorG = floor.Screen1();
+            input = new InputState();
+            beamR = new List<Character>();
+            beamL = new List<Character>();       
 
             block = new Block("block", Vector2.Zero, new Vector2(192, 64));
             blockG = block.Screen1();
@@ -72,6 +75,7 @@ namespace Zombie
             renderer.LoadTexture("enemy");
             renderer.LoadTexture("life");
             renderer.LoadTexture("block");
+            renderer.LoadTexture("beam");
 
             // TODO: use this.Content to load your game content here
         }
@@ -90,41 +94,71 @@ namespace Zombie
 
             // TODO: Add your update logic here
 
+            
             //playerの移動
-            //player.Move();
             player.Update();
-            player.Falling();
-            ((Player)player).Jump(Keyboard.GetState()); //, b.GetPosition(), isBlock
-
-            foreach (var e in enemy)
-            {
+            
+            //enemyの移動
+            foreach (var e in enemy){
                 ((EnemyA)e.Value).Move(player.GetPosition());
             }
 
-            ((Player)player).UpdateKey(Keyboard.GetState());
-
-            foreach (var b in blockG) {
-                bool isBlock = isCollision.Update(player.GetPosition(), b.GetPosition(), player.GetSize(), b.GetSize());
-                if (isBlock)
-                {
-                    player.IsFloor(b.GetPosition(), b.GetSize(), isBlock);
-                }
-            }
-
-
-            //Floorとのあたり判定
-            foreach (var f in floorG)
-            {
-                bool isFloor = isCollision.Update(player.GetPosition(), f.GetPosition(), player.GetSize(), f.GetSize());
-
-
-                ((Player)player).Jump(Keyboard.GetState()); //, f.GetPosition(), isFloor
-                if (isFloor)
-                {
-                    player.IsFloor(f.GetPosition(), f.GetSize(), isFloor);
-                }
-            }
             
+            //playerの向きをチェック
+            int rf;
+            rf = input.CheckRF(Keyboard.GetState());
+
+            //beamの移動
+            foreach (var b in beamR)
+            {
+                b.Update(); ;
+            }
+            foreach (var b in beamL)
+            {
+                b.Update(); ;
+            }
+
+            //shooting
+            ((Player)player).Shoot(beamR, beamL, rf);
+
+            //Blockとのあたり判定
+            foreach (var b in blockG) {
+                bool playerIsBlock = isCollision.Update(player.GetPosition(), b.GetPosition(), player.GetSize(), b.GetSize());
+                if (playerIsBlock)
+                {
+                    player.IsFloor(b.GetPosition(), b.GetSize(), playerIsBlock);
+                }
+                
+                foreach (var e in enemy) {
+                    bool enemyIsBlock = isCollision.Update(e.Value.GetPosition(), b.GetPosition(), e.Value.GetSize(), b.GetSize());
+                    if (enemyIsBlock)
+                    {
+                        e.Value.IsFloor(b.GetPosition(), b.GetSize(), enemyIsBlock);
+                    }
+                }
+
+                foreach (var bR in beamR) {
+                    bool beamRIsBlock = isCollision.Update(bR.GetPosition(), b.GetPosition(), bR.GetSize(), b.GetSize());
+                    if (beamRIsBlock)
+                    {
+                        beamR.Remove(bR);
+                        break;
+                    }
+                }
+
+                foreach (var bL in beamL)
+                {
+                    bool beamLIsBlock = isCollision.Update(bL.GetPosition(), b.GetPosition(), bL.GetSize(), b.GetSize());
+                    if (beamLIsBlock)
+                    {
+                        beamL.Remove(bL);
+                        break;
+                    }
+                }
+
+
+            }
+
             //windowとのあたり判定
             player.ChangePosition(isCollision.Collision(player.GetPosition()));
             player.Update();
@@ -138,13 +172,35 @@ namespace Zombie
                     player.ChangeHp(player.GetHp() - 1);
                     e.Value.ChangeHp(e.Value.GetHp() - 1);
 
-                    ((Player)player).IsEnemy();
+                    player.IsEnemy(e.Value.GetPosition());
+                }
 
-                    if (e.Value.IsDeath()) {
-                        enemy.Remove(e.Key);
+                foreach (var bL in beamL) {
+                    bool isBeamL = isCollision.Update(bL.GetPosition(), e.Value.GetPosition(), bL.GetSize(), e.Value.GetSize());
+                    if (isBeamL) {
+                        e.Value.ChangeHp(e.Value.GetHp() - 1);
+                        beamL.Remove(bL);
                         break;
                     }
                 }
+                foreach (var bR in beamR)
+                {
+                    bool isBeamR = isCollision.Update(bR.GetPosition(), e.Value.GetPosition(), bR.GetSize(), e.Value.GetSize());
+                    if (isBeamR)
+                    {
+                        e.Value.ChangeHp(e.Value.GetHp() - 1);
+                        beamR.Remove(bR);
+                        break;
+                    }
+                }
+                
+
+                if (e.Value.IsDeath())
+                {
+                    enemy.Remove(e.Key);
+                    break;
+                }
+
             }
 
             base.Update(gameTime);
@@ -158,27 +214,27 @@ namespace Zombie
 
             renderer.Begin();
 
-
-            foreach (var f in floorG)
-            {
-                f.Draw(renderer);
-            }
-
             foreach (var b in blockG)
             {
                 b.Draw(renderer);
             }
 
+            //playerの向きをチェック
+            int rf;
+            rf = input.CheckRF(Keyboard.GetState());
+            player.Draw(renderer, rf);
 
-            player.Draw(renderer);
-
-            foreach (var e in enemy)
-            {
+            foreach (var e in enemy){
                 e.Value.Draw(renderer);
             }
 
-           
-
+            foreach (var b in beamL){
+                b.Draw(renderer);
+            }
+            foreach (var b in beamR)
+            {
+                b.Draw(renderer);
+            }
 
             foreach (var e in enemy)
             {
@@ -188,9 +244,6 @@ namespace Zombie
             renderer.DrawNumber(player, player.GetHp());
 
             renderer.End();
-
-            
-
 
             base.Draw(gameTime);
         }

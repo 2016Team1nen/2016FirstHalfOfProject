@@ -15,10 +15,12 @@ namespace Zombie
                 isPursue = false;
         }
 
-
+        
         //動き
         public void Move(Vector2 player)
         {
+            base.Falling();
+
             Pursue(player);
             if (isPursue)
             {
@@ -68,15 +70,11 @@ namespace Zombie
 
 
         //実装してない
-        protected override void Move()
-        {
-        }
-
         public override void Update()
         {
         }
 
-        //public override void Jump(Microsoft.Xna.Framework.Input.KeyboardState keyState, Vector2 floor){}
+        //public override void Jump(){}
        
     }
 }
