@@ -10,29 +10,21 @@ namespace Zombie.Device
     {
         public IsCollision() { }
 
-
-        //四角い判定全般
+        //四角い判定
         public bool Update(Vector2 active, Vector2 passive, Vector2 aSize, Vector2 pSize)
         {
-            if (//左下から行く
-              active.X + aSize.X >= passive.X + pSize.X && active.X + aSize.X <= (passive.X + pSize.X + 64) &&
-              active.Y >= passive.Y + pSize.Y && active.Y <= (passive.Y + pSize.Y + 64))
-            {
-                return true;
-            }
-            if (//右上から行く
-                active.X >= passive.X + pSize.X && active.X <= (passive.X + pSize.X + 64) &&
-                active.Y + aSize.Y >= passive.Y + pSize.Y && active.Y + aSize.Y <= (passive.Y + pSize.Y + 64))
-            {
-                return true;
-            }
+            Rectangle aRect = new Rectangle((int)active.X, (int)active.Y, (int)aSize.X, (int)aSize.Y);
+            Rectangle pRect = new Rectangle((int)passive.X, (int)passive.Y, (int)pSize.X, (int)pSize.Y);
 
-            else
-            {
-                return false;
-            }
+            return aRect.Intersects(pRect);
         }
 
 
+        //windowsとのあたり判定
+        public Vector2 Collision(Vector2 active)
+        {
+            active = Vector2.Clamp(active, Vector2.Zero, new Vector2(Screen.screenWidth - 64, Screen.screenHeight - 64));
+            return active;
+        }
     }
 }

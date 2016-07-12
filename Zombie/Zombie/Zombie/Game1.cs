@@ -8,6 +8,7 @@ using Microsoft.Xna.Framework.GamerServices;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
+using Zombie.Device;
 
 
 namespace Zombie
@@ -21,6 +22,8 @@ namespace Zombie
         private Block block;
 
         private Renderer renderer;
+
+        private IsCollision isCollision;
 
         Dictionary<string, Texture2D> textures;
 
@@ -43,15 +46,17 @@ namespace Zombie
 
             textures = new Dictionary<string, Texture2D>();
 
-            player = new Player("player", 3, new Vector2(0, Screen.screenHeight - 64 * 2), Vector2.Zero, Vector2.Zero);
+            isCollision = new IsCollision();
+
+            player = new Player("player", 3, new Vector2(0, Screen.screenHeight - 64 * 2), new Vector2(64, 64), Vector2.Zero);
             enemy = new Dictionary<string, Character>(){
-                {"A",new EnemyA("enemy", 1, new Vector2(700, Screen.screenHeight - 64 * 3), Vector2.Zero, new Vector2(-5, 0))}
+                {"A",new EnemyA("enemy", 1, new Vector2(700, Screen.screenHeight - 64 * 2), new Vector2(64, 64), new Vector2(-5, 0))}
             };
-            
-            floor = new Floor("block", Vector2.Zero);
+
+            floor = new Floor("block", Vector2.Zero, new Vector2(192, 64));
             floorG = floor.Screen1();
 
-            block = new Block("block", Vector2.Zero);
+            block = new Block("block", Vector2.Zero, new Vector2(192, 64));
             blockG = block.Screen1();
 
             renderer = new Renderer(Content, GraphicsDevice);
@@ -85,58 +90,63 @@ namespace Zombie
 
             // TODO: Add your update logic here
 
-            //左右の移動
-            //player.Move();
+            //playerの移動
+            player.Move();
+            player.Falling();
 
             foreach (var e in enemy)
             {
                 ((EnemyA)e.Value).Move(player.GetPosition());
             }
 
+            ((Player)player).UpdateKey(Keyboard.GetState());
+
+            foreach (var b in blockG) {
+                bool isBlock = isCollision.Update(player.GetPosition(), b.GetPosition(), player.GetSize(), b.GetSize());
+
+                ((Player)player).Jump(Keyboard.GetState(), b.GetPosition(), isBlock);
+
+                if (isBlock)
+                {
+                    player.IsFloor(b.GetPosition(), b.GetSize(), isBlock);
+                }
+            }
+
+
+            //Floorとのあたり判定
+            foreach (var f in floorG)
+            {
+                bool isFloor = isCollision.Update(player.GetPosition(), f.GetPosition(), player.GetSize(), f.GetSize());
+
+
+                ((Player)player).Jump(Keyboard.GetState(), f.GetPosition(), isFloor);
+                if (isFloor)
+                {
+                    player.IsFloor(f.GetPosition(), f.GetSize(), isFloor);
+                }
+            }
             
             //windowとのあたり判定
-            player.Collision();
+            player.ChangePosition(isCollision.Collision(player.GetPosition()));
             player.Update();
 
             //敵とのあたり判定
             foreach (var e in enemy)
             {
-                if (((Player)player).IsCollision(e.Value.GetPosition()) == true)
+                bool isEnemy = isCollision.Update(player.GetPosition(), e.Value.GetPosition(), player.GetSize(), e.Value.GetSize());
+                if (isEnemy)
                 {
                     player.ChangeHp(player.GetHp() - 1);
                     e.Value.ChangeHp(e.Value.GetHp() - 1);
-                    if (e.Value.IsDeath())
-                    {
+
+                    ((Player)player).IsEnemy();
+
+                    if (e.Value.IsDeath()) {
                         enemy.Remove(e.Key);
                         break;
                     }
                 }
             }
-
-
-
-            //rendermonkey
-
-            foreach (var b in blockG)
-            {
-                ((Player)player).IsBlock(b.GetPosition());
-            }
-
-
-
-
-            
-
-            foreach (var f in floorG)
-            {
-                if (player.GetPosition().X >= f.GetPosition().X - 64 && player.GetPosition().X < f.GetPosition().X + 128 &&
-                    player.GetPosition().Y >= 0 && player.GetPosition().Y <= f.GetPosition().Y)
-                {
-                    ((Player)player).IsFloor(f.GetPosition());
-                }
-            }
-
-            
 
             base.Update(gameTime);
         }

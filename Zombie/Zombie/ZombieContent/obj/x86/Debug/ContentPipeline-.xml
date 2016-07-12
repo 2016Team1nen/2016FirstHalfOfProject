@@ -7,8 +7,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\player.xnb</Output>
-      <Time>2016-07-11T18:32:55.691845+09:00</Time>
+      <Output>D:\部活\チーム制作（２０１６年６月）\Zombie\Zombie\Zombie\bin\x86\Debug\Content\player.xnb</Output>
+      <Time>2016-06-18T11:17:11.6926812+09:00</Time>
     </Item>
     <Item>
       <Source>enemy.png</Source>
@@ -16,8 +16,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\enemy.xnb</Output>
-      <Time>2016-07-11T18:32:55.6458008+09:00</Time>
+      <Output>D:\部活\チーム制作（２０１６年６月）\Zombie\Zombie\Zombie\bin\x86\Debug\Content\enemy.xnb</Output>
+      <Time>2016-06-28T13:03:26+09:00</Time>
     </Item>
     <Item>
       <Source>life.png</Source>
@@ -25,8 +25,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\life.xnb</Output>
-      <Time>2016-07-11T18:32:55.6488037+09:00</Time>
+      <Output>D:\部活\チーム制作（２０１６年６月）\Zombie\Zombie\Zombie\bin\x86\Debug\Content\life.xnb</Output>
+      <Time>2015-06-25T05:43:54+09:00</Time>
     </Item>
     <Item>
       <Source>block.jpg</Source>
@@ -34,8 +34,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\block.xnb</Output>
-      <Time>2016-07-11T18:32:55.6427757+09:00</Time>
+      <Output>D:\部活\チーム制作（２０１６年６月）\Zombie\Zombie\Zombie\bin\x86\Debug\Content\block.xnb</Output>
+      <Time>2016-07-04T19:13:46.4555234+09:00</Time>
     </Item>
     <Item>
       <Source>beam.BMP</Source>
@@ -43,8 +43,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\beam.xnb</Output>
-      <Time>2016-07-11T18:32:55.6317873+09:00</Time>
+      <Output>D:\部活\チーム制作（２０１６年６月）\Zombie\Zombie\Zombie\bin\x86\Debug\Content\beam.xnb</Output>
+      <Time>2016-06-18T14:20:23.7246429+09:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -53,10 +53,10 @@
       <TargetProfile>HiDef</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>D:\部活\2016FirstHalfOfProject\Zombie\Zombie\ZombieContent\</RootDirectory>
-      <LoggerRootDirectory>D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\</LoggerRootDirectory>
-      <IntermediateDirectory>D:\部活\2016FirstHalfOfProject\Zombie\Zombie\ZombieContent\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>D:\部活\チーム制作（２０１６年６月）\Zombie\Zombie\ZombieContent\</RootDirectory>
+      <LoggerRootDirectory>D:\部活\チーム制作（２０１６年６月）\Zombie\Zombie\Zombie\</LoggerRootDirectory>
+      <IntermediateDirectory>D:\部活\チーム制作（２０１６年６月）\Zombie\Zombie\ZombieContent\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>D:\部活\チーム制作（２０１６年６月）\Zombie\Zombie\Zombie\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>

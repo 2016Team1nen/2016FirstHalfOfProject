@@ -93,6 +93,7 @@
     <Reference Include="System">
       <Private>False</Private>
     </Reference>
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml">
       <Private>False</Private>
     </Reference>
@@ -107,13 +108,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Block.cs" />
-    <Compile Include="Character.cs" />
+    <Compile Include="BoxCollider.cs" />
+    <Compile Include="Sceen\Block.cs" />
+    <Compile Include="Active\Character.cs" />
     <Compile Include="Device\InputState.cs" />
     <Compile Include="Device\IsCollision.cs" />
-    <Compile Include="EnemyA.cs" />
-    <Compile Include="Floor.cs" />
-    <Compile Include="Player.cs" />
+    <Compile Include="Active\EnemyA.cs" />
+    <Compile Include="Sceen\Floor.cs" />
+    <Compile Include="Active\Player.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Game1.cs" />
