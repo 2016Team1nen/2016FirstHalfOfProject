@@ -27,9 +27,8 @@ namespace Zombie
             this.size = size;
         }
 
-        public abstract void Move();
+        protected abstract void Move();
         public abstract void Update();
-        //public abstract void Jump(KeyboardState keyState, Vector2 floor);
 
 
         //check方向
@@ -41,15 +40,9 @@ namespace Zombie
             return current - previous;
         }
 
-        public void Falling()   //bool isCollision
+        public void Falling()  
         {
-            //if (isCollision == true)
-            //{
-            //    velocity.Y = 0;
-            //}
-            //else {
-                velocity.Y += 1;
-            //}
+            velocity.Y += 1;
             position.Y += velocity.Y;
             
         }
@@ -92,77 +85,6 @@ namespace Zombie
             {
                 velocity *= -1;
             }
-
-
-
-            //////////////////////////////////////////////
-            
-            //if (direction.Y > 0)   //Down
-            //{
-
-            //    if (position.Y >= fPosition.Y) //floorの上、或いは隣にいる
-            //    {
-                    
-                    
-            //        if (direction.X < 0)    //Left
-            //        {
-            //            position.X = fPosition.X + fSize.X;
-
-            //            velocity.Y = 0;
-            //        }
-
-            //        if (direction.X > 0)   //Right
-            //        {
-            //            position.X = fPosition.X - size.X;
-            //            velocity.Y = 0;
-            //        }
-
-            //    }
-            //    else {
-            //        position.Y = fPosition.Y - size.Y + 1;
-            //    }
-                
-            //}
-
-
-            //if (direction.Y < 0)   //Up
-            //{
-            //    if (position.Y >= (fPosition + fSize).Y)    //floorの下、或いは隣にいる
-            //    {
-            //        if (direction.X < 0)    //Left
-            //        {
-            //            position.X = fPosition.X + fSize.X;
-            //        }
-
-            //        if (direction.X > 0)   //Right
-            //        {
-            //            position.X = fPosition.X - size.X;
-            //        }
-            //    }
-            //    velocity.Y *= -1;
-            //}
-
-
-            //else
-            //{
-            //    if (IsDirection().X < 0)    //Left
-            //    {
-            //        if (position.Y == fPosition.Y)
-            //        {
-            //            position.X -= IsDirection().X;
-            //        }
-
-            //    }
-            //    if (IsDirection().X > 0)   //Right
-            //    {
-            //        if (position.Y == fPosition.Y)
-            //        {
-            //            position.X -= IsDirection().X;
-            //        }
-
-            //    }
-            //}
-
         }
 
 

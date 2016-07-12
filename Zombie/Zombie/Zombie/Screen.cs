@@ -7,7 +7,7 @@ namespace Zombie
 {
     public class Screen
     {
-        public static readonly int screenHeight = 600;
-        public static readonly int screenWidth = 800;
+        public static readonly int screenHeight = 720;
+        public static readonly int screenWidth = 1280;
     }
 }

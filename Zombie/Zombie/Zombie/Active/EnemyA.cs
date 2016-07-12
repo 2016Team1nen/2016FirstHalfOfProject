@@ -19,13 +19,9 @@ namespace Zombie
         //動き
         public void Move(Vector2 player)
         {
-
             Pursue(player);
-            
-
-            if (isPursue == true)
+            if (isPursue)
             {
-
                 if (player.X - position.X > 0)
                 {
                     if (velocity.X < 0)
@@ -41,9 +37,9 @@ namespace Zombie
                     }
                 }
             }
+            
             else
             {
-                
                 if (position.X < 500)
                 {
                     velocity.X *= -1;
@@ -72,7 +68,7 @@ namespace Zombie
 
 
         //実装してない
-        public override void Move()
+        protected override void Move()
         {
         }
 

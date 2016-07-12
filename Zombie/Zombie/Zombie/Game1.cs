@@ -91,8 +91,10 @@ namespace Zombie
             // TODO: Add your update logic here
 
             //playerの移動
-            player.Move();
+            //player.Move();
+            player.Update();
             player.Falling();
+            ((Player)player).Jump(Keyboard.GetState()); //, b.GetPosition(), isBlock
 
             foreach (var e in enemy)
             {
@@ -103,9 +105,6 @@ namespace Zombie
 
             foreach (var b in blockG) {
                 bool isBlock = isCollision.Update(player.GetPosition(), b.GetPosition(), player.GetSize(), b.GetSize());
-
-                ((Player)player).Jump(Keyboard.GetState(), b.GetPosition(), isBlock);
-
                 if (isBlock)
                 {
                     player.IsFloor(b.GetPosition(), b.GetSize(), isBlock);
@@ -119,7 +118,7 @@ namespace Zombie
                 bool isFloor = isCollision.Update(player.GetPosition(), f.GetPosition(), player.GetSize(), f.GetSize());
 
 
-                ((Player)player).Jump(Keyboard.GetState(), f.GetPosition(), isFloor);
+                ((Player)player).Jump(Keyboard.GetState()); //, f.GetPosition(), isFloor
                 if (isFloor)
                 {
                     player.IsFloor(f.GetPosition(), f.GetSize(), isFloor);

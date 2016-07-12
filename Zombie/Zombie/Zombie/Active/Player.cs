@@ -20,11 +20,12 @@ namespace Zombie
 
 
         public override void Update() {
+            Move();
         }
 
-        public override void Move()
+        protected override void Move()
         {
-            float speed = 7;
+            float speed = 5;
 
             velocity = inputState.Move(Keyboard.GetState(), velocity);
             position.X += velocity.X * speed;
@@ -46,7 +47,7 @@ namespace Zombie
             return current && !previous;
         }
 
-        public void Jump(KeyboardState keyState, Vector2 p, bool b) 
+        public void Jump(KeyboardState keyState)    //, Vector2 p, bool b 
         {
             if (velocity.Y == 0 && keyState.IsKeyDown(Keys.W))    
                 {
