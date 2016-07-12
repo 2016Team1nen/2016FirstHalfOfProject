@@ -49,7 +49,7 @@ namespace Zombie
             else
             {
                 
-                if (position.X < 500)
+                if (position.X < 400)
                 {
                     velocity.X *= -1;
                 }

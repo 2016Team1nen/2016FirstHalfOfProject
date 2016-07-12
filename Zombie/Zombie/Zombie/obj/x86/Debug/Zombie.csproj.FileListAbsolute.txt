@@ -31,3 +31,14 @@ D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\obj\x86\Debug\Zombie.cspro
 D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\obj\x86\Debug\Zombie.exe
 D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\obj\x86\Debug\Zombie.pdb
+C:\K016A1724\Teamwork\Zombie\Zombie\Zombie\bin\x86\Debug\Content\player.xnb
+C:\K016A1724\Teamwork\Zombie\Zombie\Zombie\bin\x86\Debug\Content\enemy.xnb
+C:\K016A1724\Teamwork\Zombie\Zombie\Zombie\bin\x86\Debug\Content\life.xnb
+C:\K016A1724\Teamwork\Zombie\Zombie\Zombie\bin\x86\Debug\Content\block.xnb
+C:\K016A1724\Teamwork\Zombie\Zombie\Zombie\bin\x86\Debug\Content\beam.xnb
+C:\K016A1724\Teamwork\Zombie\Zombie\Zombie\bin\x86\Debug\Zombie.exe
+C:\K016A1724\Teamwork\Zombie\Zombie\Zombie\bin\x86\Debug\Zombie.pdb
+C:\K016A1724\Teamwork\Zombie\Zombie\Zombie\obj\x86\Debug\Zombie.csprojResolveAssemblyReference.cache
+C:\K016A1724\Teamwork\Zombie\Zombie\Zombie\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\K016A1724\Teamwork\Zombie\Zombie\Zombie\obj\x86\Debug\Zombie.exe
+C:\K016A1724\Teamwork\Zombie\Zombie\Zombie\obj\x86\Debug\Zombie.pdb
