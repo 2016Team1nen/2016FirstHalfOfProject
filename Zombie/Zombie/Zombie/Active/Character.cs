@@ -145,8 +145,10 @@ namespace Zombie
 
         public void Draw(Renderer renderer, int rf)
         {
-            renderer.DrawTexture(name, position, rf);
+            renderer.Draw(name, position, rf);
         }
+
+
 
         //RefPosition
         public void SetPosition(ref Vector2 other)

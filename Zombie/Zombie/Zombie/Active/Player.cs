@@ -18,16 +18,19 @@ namespace Zombie
         }
 
 
-        public void Shoot(List<Character> beamR, List<Character>beamL, int rf) {
+        public void Shoot(List<Beam> beamR, List<Beam> beamL, int rf, InputState input)
+        {
+            bool cb = input.GetChangeBeam();
             inputState.UpdateKey(Keyboard.GetState());
-
+            
             if (rf > 0)
             {
                 if (inputState.IsKeyDown(Keys.Space))
                 {
+                    
                     Vector2 start = position + new Vector2(64, 10);
-                    beamR.Add(new Beam("beam", 1, start, new Vector2(32, 32), Vector2.Zero));
-                    ((Beam)beamR[beamR.Count - 1]).ChangeStart(position.X,rf);
+                    beamR.Add(new Beam(start, new Vector2(32, 32), Vector2.Zero, cb));
+                    beamR[beamR.Count - 1].ChangeStart(position.X, rf);
                 }
             }
 
@@ -35,14 +38,14 @@ namespace Zombie
                 if (inputState.IsKeyDown(Keys.Space))
                 {
                     Vector2 start = position + new Vector2(-32, 10);
-                    beamL.Add(new Beam("beam", 1, start, new Vector2(32, 32), Vector2.Zero));
-                    ((Beam)beamL[beamL.Count - 1]).ChangeStart(position.X,rf);
+                    beamL.Add(new Beam(start, new Vector2(32, 32), Vector2.Zero, cb));
+                    beamL[beamL.Count - 1].ChangeStart(position.X, rf);
                 }                
             }
 
             foreach (var b in beamR)
             {
-                if (((Beam)b).GetStart() < (b.GetPosition().X - 500))
+                if (b.GetStart() < (b.GetPosition().X - 500))
                 {
                     beamR.Remove(b);
                     break;
@@ -51,7 +54,7 @@ namespace Zombie
 
             foreach (var b in beamL)
             {
-                if (((Beam)b).GetStart() > (b.GetPosition().X + 500))
+                if (b.GetStart() > (b.GetPosition().X + 500))
                 {
                     beamL.Remove(b);
                     break;
@@ -69,6 +72,7 @@ namespace Zombie
             Move();
             Jump();
             base.Falling();
+            
         }
 
         private void Move()
@@ -84,7 +88,7 @@ namespace Zombie
         {
             if (velocity.Y == 0 && Keyboard.GetState().IsKeyDown(Keys.W))    
                 {
-                    velocity.Y -= 20.1f;
+                    velocity.Y -= 14.6f;
                 }
         }
 

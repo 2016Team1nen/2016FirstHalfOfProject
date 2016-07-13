@@ -12,8 +12,11 @@ namespace Zombie
         private KeyboardState currentKey;
         private KeyboardState previousKey;
         private int checkRF;
+        private bool changeBeam;
 
-        public InputState() { }
+        public InputState() {
+            changeBeam = true;
+        }
 
         public Vector2 Move(KeyboardState keyState , Vector2 velocity)
         {
@@ -27,7 +30,7 @@ namespace Zombie
             {
                 velocity.X += 1;
             }
-
+            
             return velocity;
         }
 
@@ -44,6 +47,16 @@ namespace Zombie
             return checkRF;
         }
 
+        //beamの種類を切り替える true:水色、false:ピンク
+        public void ChangeBeam(KeyboardState keyState)
+        {
+            UpdateKey(keyState);
+            if (IsKeyDown(Keys.Q))
+            {
+                changeBeam = !changeBeam;
+            }
+        }
+
 
         //Keyの状態をチェックするメソッド
         public void UpdateKey(KeyboardState keyState)
@@ -58,7 +71,9 @@ namespace Zombie
             return current && !previous;
         }
 
-
+        public bool GetChangeBeam() {
+            return changeBeam;
+        }
 
     }
 }

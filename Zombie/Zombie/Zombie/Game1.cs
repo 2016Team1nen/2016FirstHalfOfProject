@@ -28,8 +28,8 @@ namespace Zombie
         private Dictionary<string, Texture2D> textures;
 
         private Dictionary<string, Character> enemy;
-        private List<Character> beamR;
-        private List<Character> beamL;
+        private List<Beam> beamR;
+        private List<Beam> beamL;
         private List<Block> blockG;
 
         private InputState input;
@@ -56,8 +56,8 @@ namespace Zombie
             };
 
             input = new InputState();
-            beamR = new List<Character>();
-            beamL = new List<Character>();       
+            beamR = new List<Beam>();
+            beamL = new List<Beam>();       
 
             block = new Block("block", Vector2.Zero, new Vector2(192, 64));
             blockG = block.Screen1();
@@ -103,6 +103,9 @@ namespace Zombie
                 ((EnemyA)e.Value).Move(player.GetPosition());
             }
 
+            //beamの種類のチェック
+            input.ChangeBeam(Keyboard.GetState());
+            
             
             //playerの向きをチェック
             int rf;
@@ -119,7 +122,7 @@ namespace Zombie
             }
 
             //shooting
-            ((Player)player).Shoot(beamR, beamL, rf);
+            ((Player)player).Shoot(beamR, beamL, rf, input);
 
             //Blockとのあたり判定
             foreach (var b in blockG) {
@@ -155,8 +158,6 @@ namespace Zombie
                         break;
                     }
                 }
-
-
             }
 
             //windowとのあたり判定
@@ -228,12 +229,13 @@ namespace Zombie
                 e.Value.Draw(renderer);
             }
 
+            
             foreach (var b in beamL){
-                b.Draw(renderer);
+                b.Draw(renderer, ((Beam)b).GetBeamType());
             }
             foreach (var b in beamR)
             {
-                b.Draw(renderer);
+                b.Draw(renderer, ((Beam)b).GetBeamType());
             }
 
             foreach (var e in enemy)
