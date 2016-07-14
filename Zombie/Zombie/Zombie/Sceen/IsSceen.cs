@@ -7,6 +7,8 @@ namespace Zombie.Sceen
 {
     enum IsSceen
     {
-        
+        TITLE,
+        GAMEPLAY,
+        ENDING
     }
 }

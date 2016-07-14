@@ -122,6 +122,7 @@
     <Compile Include="Fed\Screen.cs" />
     <Compile Include="Sceen\Ending.cs" />
     <Compile Include="Sceen\GamePlay.cs" />
+    <Compile Include="Sceen\ISceen.cs" />
     <Compile Include="Sceen\IsSceen.cs" />
     <Compile Include="Sceen\SceenManager.cs" />
     <Compile Include="Sceen\Title.cs" />
