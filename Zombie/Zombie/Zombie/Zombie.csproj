@@ -120,6 +120,11 @@
     <Compile Include="Game1.cs" />
     <Compile Include="Device\Renderer.cs" />
     <Compile Include="Fed\Screen.cs" />
+    <Compile Include="Sceen\Ending.cs" />
+    <Compile Include="Sceen\GamePlay.cs" />
+    <Compile Include="Sceen\IsSceen.cs" />
+    <Compile Include="Sceen\SceenManager.cs" />
+    <Compile Include="Sceen\Title.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Game.ico" />
