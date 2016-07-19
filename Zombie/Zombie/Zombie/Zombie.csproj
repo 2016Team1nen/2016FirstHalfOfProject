@@ -109,6 +109,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Active\Beam.cs" />
+    <Compile Include="Input\Input.cs" />
     <Compile Include="Sceen\Block.cs" />
     <Compile Include="Active\Character.cs" />
     <Compile Include="Device\InputState.cs" />
