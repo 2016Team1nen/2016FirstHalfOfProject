@@ -26,7 +26,7 @@ namespace Zombie.Active
                 this.size = size;
         }
 
-        public  void Update()
+        public void Update()
         {
             velocity.X += rf;
             position += velocity;
