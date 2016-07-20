@@ -15,41 +15,18 @@ namespace Zombie
                 isPursue = false;
         }
 
-        
         //動き
         public void Move(Vector2 player)
         {
-            base.Falling();
-
+            Falling();
             Pursue(player);
-            if (isPursue)
-            {
-                if (player.X - position.X > 0)
-                {
-                    if (velocity.X < 0)
-                    {
-                        velocity.X *= -1;
-                    }
-                }
-                else
-                {
-                    if (velocity.X > 0)
-                    {
-                        velocity.X *= -1;
-                    }
-                }
+            if (isPursue) {
+                if (player.X - position.X > 0 && velocity.X < 0)  { velocity.X *= -1; }
+                else if (player.X - position.X < 0 && velocity.X > 0) {  velocity.X *= -1; }
             }
-            
-            else
-            {
-                if (position.X < 500)
-                {
-                    velocity.X *= -1;
-                }
-                if (position.X > 700)
-                {
-                    velocity.X *= -1;
-                }
+            else {
+                if (position.X < 500) { velocity.X *= -1; }
+                if (position.X > 700) { velocity.X *= -1; }
             }
             position += velocity;
         }
@@ -58,23 +35,13 @@ namespace Zombie
 
         //追いかけスイッチ
         public void Pursue(Vector2 player) {
-            float dictance = (float)Math.Sqrt((player.X - position.X) * (player.X - position.X) + (player.Y - position.Y) * (player.Y - position.Y));
-
-            if (dictance <= 200) {
-                isPursue = true;
-            }
+            float dictance = (float)Math.Sqrt((player.X - position.X) * (player.X - position.X) 
+                                        + (player.Y - position.Y) * (player.Y - position.Y));
+            if (dictance <= 200) { isPursue = true; }
         }
-
-
-
-
 
         //実装してない
-        public override void Update()
-        {
-        }
-
-        //public override void Jump(){}
+        public override void Update(GameTime gameTime) { }
        
     }
 }

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
+using Zombie.Active;
 
 namespace Zombie
 {
@@ -11,52 +12,15 @@ namespace Zombie
     {
         private KeyboardState currentKey;
         private KeyboardState previousKey;
-        private int checkRF;
-        private bool changeBeam;
 
         public InputState() {
-            changeBeam = true;
         }
 
-        public Vector2 Move(KeyboardState keyState , Vector2 velocity)
-        {
-            velocity.X = 0;
-
-            if (keyState.IsKeyDown(Keys.A))
-            {
-                velocity.X -= 1;
-            }
-            if (keyState.IsKeyDown(Keys.D))
-            {
-                velocity.X += 1;
-            }
-            
-            return velocity;
-        }
-
-        //向きチェック right=1,left=-1
-        public int CheckRF(KeyboardState keyState)
-        {
-            if (keyState.IsKeyDown(Keys.D)) {
-                checkRF = 1;
-            }
-            if (keyState.IsKeyDown(Keys.A))
-            {
-                checkRF = -1;
-            }
-            return checkRF;
-        }
-
-        //beamの種類を切り替える true:水色、false:ピンク
-        public void ChangeBeam(KeyboardState keyState)
-        {
-            UpdateKey(keyState);
-            if (IsKeyDown(Keys.Q))
-            {
-                changeBeam = !changeBeam;
-            }
-        }
-
+        public bool IsA(){ return Keyboard.GetState ().IsKeyDown(Keys.A); } //左
+        public bool IsD() { return Keyboard.GetState().IsKeyDown(Keys.D); } //右
+        public bool IsW() { return Keyboard.GetState().IsKeyDown(Keys.W); } //ジャンプ
+        public bool IsSpace() { return Keyboard.GetState().IsKeyDown(Keys.Space); } //シュート
+        public bool IsQ() { return Keyboard.GetState().IsKeyDown(Keys.Q); } //弾の切り替え
 
         //Keyの状態をチェックするメソッド
         public void UpdateKey(KeyboardState keyState)
@@ -69,10 +33,6 @@ namespace Zombie
             bool current = currentKey.IsKeyDown(key);
             bool previous = previousKey.IsKeyDown(key);
             return current && !previous;
-        }
-
-        public bool GetChangeBeam() {
-            return changeBeam;
         }
 
     }

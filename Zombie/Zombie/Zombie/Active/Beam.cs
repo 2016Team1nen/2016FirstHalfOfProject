@@ -6,68 +6,33 @@ using Microsoft.Xna.Framework;
 
 namespace Zombie.Active
 {
-    class Beam
+    class Beam:Character
     {
-        private string name;
-        private Vector2 position;
-        private Vector2 velocity;
-        private Vector2 size;
-
         private float start;    //発射した時のX座標
-        private int rf;            //プレイヤーの向き
+        private int rl;            //プレイヤーの向き
         private bool beamType;
 
-        public Beam(Vector2 position, Vector2 size, Vector2 velocity, bool beamType)
-             {
-                name = "beam";
-                this.beamType = beamType;
-                this.position = position;
-                this.velocity = velocity;
-                this.size = size;
+        public Beam(string name, int hp, Vector2 position, Vector2 size, Vector2 velocity, bool beamType, int rl)
+            :base(name,hp,position,size,velocity)
+        {
+            this.rl = rl;
+            this.beamType = beamType;
+            this.start = position.X;
         }
 
-        public  void Update()
+        public override void Update(GameTime gameTime)
         {
-            velocity.X += rf;
+            velocity.X += rl;
             position += velocity;
         }
 
         //get
-        public bool GetBeamType()
-        {
-            return beamType;
-        }
-
-
-        public float GetStart()
-        {
-            return start;
-        }
-
-        public Vector2 GetPosition()
-        {
-            return position;
-        }
-
-        public Vector2 GetSize()
-        {
-            return size;
-        }
-
-
-
+        public bool GetBeamType() { return beamType; }
+        public float GetStart() { return start; }
 
         //change
-        public void ChangeStart(float start, int rf) {
-            this.start = start;
-            this.rf = rf;
-        }
+        public void ChangeRL(int rl) { this.rl = rl; }
 
-
-        public void Draw(Renderer renderer, bool cb)
-        {
-            renderer.Draw(name, position, cb);
-        }
-
+        public void Draw(Renderer renderer, bool cb) { renderer.Draw(name, position, cb); }
     }
 }

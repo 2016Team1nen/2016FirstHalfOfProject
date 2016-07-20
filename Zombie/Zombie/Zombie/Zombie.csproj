@@ -109,6 +109,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Active\Beam.cs" />
+    <Compile Include="Device\DeviceManager.cs" />
+    <Compile Include="Device\Sound.cs" />
     <Compile Include="Sceen\Block.cs" />
     <Compile Include="Active\Character.cs" />
     <Compile Include="Device\InputState.cs" />

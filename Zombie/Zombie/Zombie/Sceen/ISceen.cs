@@ -2,17 +2,17 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Microsoft.Xna.Framework;
+using Zombie.Device;
 
 namespace Zombie.Sceen
 {
     interface ISceen
     {
-
-
         void Initialize();
         void Update(GameTime gameTime);
-        void Draw(SpriteBatch spriteBatch, Dictionary<string, Texture2D> textures);
+        void Draw(Renderer renderer);
         bool IsEnd();
-        Sceen Next();
+        IsSceen Next();
     }
 }
