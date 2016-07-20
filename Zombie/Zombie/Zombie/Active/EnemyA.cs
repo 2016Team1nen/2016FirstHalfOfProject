@@ -35,9 +35,17 @@ namespace Zombie
 
         //追いかけスイッチ
         public void Pursue(Vector2 player) {
+<<<<<<< HEAD
             float dictance = (float)Math.Sqrt((player.X - position.X) * (player.X - position.X) 
                                         + (player.Y - position.Y) * (player.Y - position.Y));
             if (dictance <= 200) { isPursue = true; }
+=======
+            float distance = (float)Math.Sqrt((player.X - position.X) * (player.X - position.X) + (player.Y - position.Y) * (player.Y - position.Y));
+
+            if (distance <= 200) {
+                isPursue = true;
+            }
+>>>>>>> origin/Michael
         }
 
         //実装してない

@@ -20,7 +20,11 @@ namespace Zombie.Active
             this.start = position.X;
         }
 
+<<<<<<< HEAD
         public override void Update(GameTime gameTime)
+=======
+        public void Update()
+>>>>>>> origin/Michael
         {
             velocity.X += rl;
             position += velocity;
