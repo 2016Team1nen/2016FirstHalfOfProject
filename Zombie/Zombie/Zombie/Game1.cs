@@ -20,6 +20,7 @@ namespace Zombie
         private DeviceManager deviceManager;
         private SceenManager sceenManager;
         private Renderer renderer;
+        private Sound sound;
 
 
         public Game1()
@@ -35,6 +36,7 @@ namespace Zombie
             // TODO: Add your initialization logic here
             deviceManager = new DeviceManager(Content, GraphicsDevice);
             renderer = deviceManager.GetRenderer();
+            sound = deviceManager.GetSound();
 
             sceenManager = new SceenManager();
             sceenManager.Add(IsSceen.TITLE, new Title(deviceManager));
@@ -59,6 +61,12 @@ namespace Zombie
             renderer.LoadTexture("beam");
             renderer.LoadTexture("title");
             renderer.LoadTexture("ending");
+            sound.LoadBGM("titlebgm");
+            sound.LoadBGM("gameplaybgm");
+            sound.LoadBGM("endingbgm");
+            sound.LoadSE("titlese");
+            sound.LoadSE("gameplayse");
+            sound.LoadSE("endingse");
 
             // TODO: use this.Content to load your game content here
         }

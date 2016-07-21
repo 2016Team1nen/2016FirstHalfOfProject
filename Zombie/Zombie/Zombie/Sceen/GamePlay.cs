@@ -27,6 +27,7 @@ namespace Zombie.Sceen
 
         public GamePlay(DeviceManager deviceManager) {
             isCollision = deviceManager.GetIsCollision();
+            sound = deviceManager.GetSound();
         }
 
         public void Initialize() {
@@ -45,8 +46,10 @@ namespace Zombie.Sceen
 
         }
         public void Update(GameTime gameTime) {
+            sound.PlayeBGM("gameplaybgm");
+
             //Ending判定
-            if (player.GetPosition().X >= Screen.screenWidth - 64) { isEnd = true; }
+            if (player.GetPosition().X >= Screen.screenWidth - 64) { isEnd = true; sound.StopBGM(); }
 
             //beamの移動
             foreach (var b in beamR) { b.Update(gameTime);  }
@@ -74,7 +77,7 @@ namespace Zombie.Sceen
                     bool enemyIsBlock = isCollision.Update(e.GetPosition(), b.GetPosition(), e.GetSize(), b.GetSize());
                     if (enemyIsBlock) { e.IsBlock(b.GetPosition(), b.GetSize(), enemyIsBlock); }
                 }
-
+                
                 //弾とのあたり判定
                 foreach (var bR in beamR) {
                     bool beamRIsBlock = isCollision.Update(bR.GetPosition(), b.GetPosition(), bR.GetSize(), b.GetSize());
@@ -94,6 +97,7 @@ namespace Zombie.Sceen
                 //敵とプレーヤーのあたり判定
                 bool isEnemy = isCollision.Update(player.GetPosition(), e.GetPosition(), player.GetSize(), e.GetSize());
                 if (isEnemy) {
+                    sound.PlaySE("gameplayse");
                     player.ChangeHp(player.GetHp() - 1);
                     e.ChangeHp(e.GetHp() - 1);
                     player.IsEnemy(e.GetPosition());
@@ -103,6 +107,7 @@ namespace Zombie.Sceen
                 foreach (var bL in beamL) {
                     bool isBeamL = isCollision.Update(bL.GetPosition(), e.GetPosition(), bL.GetSize(), e.GetSize());
                     if (isBeamL) {
+                        sound.PlaySE("gameplayse");
                         e.ChangeHp(e.GetHp() - 1);
                         beamL.Remove(bL);
                         break;
@@ -111,6 +116,7 @@ namespace Zombie.Sceen
                 foreach (var bR in beamR) {
                     bool isBeamR = isCollision.Update(bR.GetPosition(), e.GetPosition(), bR.GetSize(), e.GetSize());
                     if (isBeamR) {
+                        sound.PlaySE("gameplayse");
                         e.ChangeHp(e.GetHp() - 1);
                         beamR.Remove(bR);
                         break;

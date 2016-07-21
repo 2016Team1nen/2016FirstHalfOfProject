@@ -41,7 +41,6 @@ namespace Zombie
             Vector2 p = new Vector2(192 * 3, Screen.screenHeight - 64 * 5);
             block.Add(new Block("block", p, new Vector2(192, 64)));
 
-
             p = new Vector2(192 * 2, Screen.screenHeight - 64 * 2);
             while (p.X < Screen.screenWidth - 192*2)
             {

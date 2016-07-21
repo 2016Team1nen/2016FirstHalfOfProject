@@ -64,6 +64,73 @@
       <Output>D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\ending.xnb</Output>
       <Time>2016-07-14T22:14:51.8496983+09:00</Time>
     </Item>
+    <Item>
+      <Source>endingbgm.mp3</Source>
+      <Name>endingbgm</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\endingbgm.xnb</Output>
+      <Extra>D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\endingbgm.wma</Extra>
+      <Time>2011-02-24T15:49:06+09:00</Time>
+    </Item>
+    <Item>
+      <Source>gameplaybgm.mp3</Source>
+      <Name>gameplaybgm</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\gameplaybgm.xnb</Output>
+      <Extra>D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\gameplaybgm.wma</Extra>
+      <Time>2010-09-08T01:38:16+09:00</Time>
+    </Item>
+    <Item>
+      <Source>titlebgm.mp3</Source>
+      <Name>titlebgm</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\titlebgm.xnb</Output>
+      <Extra>D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\titlebgm.wma</Extra>
+      <Time>2008-10-06T14:42:36+09:00</Time>
+    </Item>
+    <Item>
+      <Source>ZombieBGM.mp3</Source>
+      <Name>ZombieBGM</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\ZombieBGM.xnb</Output>
+      <Extra>D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\ZombieBGM.wma</Extra>
+      <Time>2016-07-20T11:51:46.5281506+09:00</Time>
+    </Item>
+    <Item>
+      <Source>endingse.wav</Source>
+      <Name>endingse</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\endingse.xnb</Output>
+      <Time>2011-02-24T15:51:04+09:00</Time>
+    </Item>
+    <Item>
+      <Source>gameplayse.wav</Source>
+      <Name>gameplayse</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\gameplayse.xnb</Output>
+      <Time>2011-02-24T15:50:16+09:00</Time>
+    </Item>
+    <Item>
+      <Source>titlese.wav</Source>
+      <Name>titlese</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\titlese.xnb</Output>
+      <Time>2010-09-10T17:56:00+09:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <ContentProjectGUID Null="true" />

@@ -73,7 +73,7 @@ namespace Zombie
 
         private void Jump() {
             if (velocity.Y == 0 && input.IsW()) {
-                velocity.Y -= 15.6f;
+                velocity.Y -= 25.6f;
             }
             position.Y += velocity.Y;
         }

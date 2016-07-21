@@ -30,33 +30,34 @@ namespace Zombie
         public void IsBlock(Vector2 blockPosition, Vector2 bSize, bool isBlock)
         {
             //左から行く(○)
-            if (isBlock && position.X < blockPosition.X &&
-                position.Y <= (blockPosition + bSize).Y - 2 &&
-                position.Y >= blockPosition.Y + 2) {
-                position.X = (blockPosition - size).X - 1;
+            if (isBlock && position.X <= (blockPosition.X - 59) &&
+                position.Y < (blockPosition + bSize).Y &&
+                position.Y > (blockPosition - size).Y) {
+                velocity.Y = 0.5f;
+                position.X = (blockPosition - size).X;
             }
 
             //右から行く(○)
-            if (isBlock && (position + size).X > (blockPosition + bSize).X &&
-                position.Y <= (blockPosition + bSize).Y - 2 &&
-                position.Y >= blockPosition.Y + 2) {
+            if (isBlock && (position.X + 5) >= (blockPosition + bSize).X && 
+                position.Y < (blockPosition + bSize).Y&&
+                position.Y > (blockPosition - size).Y + 1) {
+                velocity.Y = 0.5f;
                 position.X = (blockPosition + bSize).X;
             }
 
             //上から落ちる(○)
-            if (isBlock && position.X >= (blockPosition - size).X &&
-                position.X <= (blockPosition + bSize).X &&
+            if (isBlock && position.X > (blockPosition - size).X &&
+                position.X < (blockPosition + bSize).X &&
                 position.Y < blockPosition.Y) {
                 velocity.Y = 0;
-                position.Y = blockPosition.Y - size.Y + 2;
+                position.Y = blockPosition.Y - size.Y;
             }
 
-            //下から行く
-            if (isBlock && position.X >= (blockPosition - size).X &&
-                (position + size).X <= (blockPosition + bSize).X &&
-                position.Y > blockPosition.Y)
-            { velocity *= -1; }
-
+            //下から行く(○)
+            if (isBlock && position.X > (blockPosition - size).X &&
+                position.X < (blockPosition + bSize).X &&
+                position.Y > blockPosition.Y){
+                velocity.Y *= -1; }
         }
 
         public void IsEnemy(Vector2 enemyPosition) {

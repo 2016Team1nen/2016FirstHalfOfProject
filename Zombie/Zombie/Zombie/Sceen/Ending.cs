@@ -11,18 +11,23 @@ namespace Zombie.Sceen
     class Ending : ISceen
     {
         private bool isEnd;
-
         private InputState input;
+        private Sound sound;
+
         public Ending(DeviceManager deviceManager) {
-            this.input = deviceManager.GetInputState();
+            input = deviceManager.GetInputState();
+            sound = deviceManager.GetSound();
         }
 
         public void Initialize() {
             isEnd = false;
         }
         public void Update(GameTime gameTime) {
+            sound.PlayeBGM("endingbgm");
             if (Keyboard.GetState().IsKeyDown(Keys.Enter))
             {
+                sound.PlaySE("endingse");
+                sound.StopBGM();
                 isEnd = true;
             }
         }

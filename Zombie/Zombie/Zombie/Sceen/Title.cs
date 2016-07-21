@@ -11,11 +11,13 @@ namespace Zombie.Sceen
     class Title : ISceen
     {
         private InputState input;
+        private Sound sound;
         private bool isEnd;
 
         public Title(DeviceManager deviceManager)
         {
-            this.input = deviceManager.GetInputState();
+            input = deviceManager.GetInputState();
+            sound = deviceManager.GetSound();
             isEnd = false;
         }
 
@@ -23,8 +25,12 @@ namespace Zombie.Sceen
             isEnd = false;
         }
         public void Update(GameTime gameTime) {
+            sound.PlayeBGM("titlebgm");
+
             if (Keyboard.GetState().IsKeyDown(Keys.Space))
             {
+                sound.PlaySE("titlese");
+                sound.StopBGM();
                 isEnd = true;
             }
         }

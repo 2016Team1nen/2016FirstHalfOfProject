@@ -53,7 +53,7 @@ namespace Zombie.Device
             currentBGM = null;
         }
 
-        public void PlayerBGM(string name) {
+        public void PlayeBGM(string name) {
             if (currentBGM == name) { return; }
             if (IsPlayingBGM()) {
                 StopBGM();

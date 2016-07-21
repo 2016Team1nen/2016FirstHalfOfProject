@@ -5,3 +5,14 @@ Content\block.xnb
 Content\beam.xnb
 Content\title.xnb
 Content\ending.xnb
+Content\endingbgm.xnb
+Content\endingbgm.wma
+Content\gameplaybgm.xnb
+Content\gameplaybgm.wma
+Content\titlebgm.xnb
+Content\titlebgm.wma
+Content\ZombieBGM.xnb
+Content\ZombieBGM.wma
+Content\endingse.xnb
+Content\gameplayse.xnb
+Content\titlese.xnb
