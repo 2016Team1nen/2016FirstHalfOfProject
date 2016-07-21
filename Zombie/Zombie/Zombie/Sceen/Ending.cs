@@ -24,7 +24,8 @@ namespace Zombie.Sceen
         }
         public void Update(GameTime gameTime) {
             sound.PlayeBGM("endingbgm");
-            if (Keyboard.GetState().IsKeyDown(Keys.Enter))
+            input.UpdateKey(Keyboard.GetState());
+            if (input.IsKeyDown(Keys.Enter))
             {
                 sound.PlaySE("endingse");
                 sound.StopBGM();

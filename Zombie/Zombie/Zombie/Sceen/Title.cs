@@ -30,8 +30,8 @@ namespace Zombie.Sceen
             sound.PlayeBGM("titlebgm");
             select.SelectT();
             s = select.GetSelect();
-
-            if (Keyboard.GetState().IsKeyDown(Keys.Enter) && s == 0) {
+            input.UpdateKey(Keyboard.GetState());
+            if (input.IsKeyDown(Keys.Enter) && s == 0) {
                 sound.PlaySE("titlese");
                 sound.StopBGM();
                 isEnd = true;
