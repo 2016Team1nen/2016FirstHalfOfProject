@@ -13,11 +13,13 @@ namespace Zombie.Sceen
         private InputState input;
         private Sound sound;
         private bool isEnd;
+        private Select select;
+        private int s;
 
-        public Title(DeviceManager deviceManager)
-        {
+        public Title(DeviceManager deviceManager) {
             input = deviceManager.GetInputState();
             sound = deviceManager.GetSound();
+            select = deviceManager.GetSelect();
             isEnd = false;
         }
 
@@ -26,9 +28,10 @@ namespace Zombie.Sceen
         }
         public void Update(GameTime gameTime) {
             sound.PlayeBGM("titlebgm");
+            select.SelectT();
+            s = select.GetSelect();
 
-            if (Keyboard.GetState().IsKeyDown(Keys.Space))
-            {
+            if (Keyboard.GetState().IsKeyDown(Keys.Enter) && s == 0) {
                 sound.PlaySE("titlese");
                 sound.StopBGM();
                 isEnd = true;
@@ -36,7 +39,11 @@ namespace Zombie.Sceen
         }
         public void Draw(Renderer renderer) {
             renderer.Begin();
-            renderer.DrawTexture("title", Vector2.Zero);
+            renderer.DrawTextureW("title", Vector2.Zero);
+            if (s == 0) 
+            { renderer.DrawTextureG("gamestart", new Vector2(430, 400)); }
+            else if (s == 1) 
+            { renderer.DrawTextureG("stuffrole", new Vector2(430, 490)); }
             renderer.End();
         }
         public bool IsEnd() {

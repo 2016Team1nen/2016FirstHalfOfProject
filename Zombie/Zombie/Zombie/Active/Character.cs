@@ -94,7 +94,7 @@ namespace Zombie
 
 
         //Draw
-        public void Draw(Renderer renderer) { renderer.DrawTexture(name, position); }
+        public void Draw(Renderer renderer) { renderer.DrawTextureW(name, position); }
         public void Draw(Renderer renderer, int rf) { renderer.Draw(name, position, rf); }
 
 

@@ -131,6 +131,24 @@
       <Output>D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\titlese.xnb</Output>
       <Time>2010-09-10T17:56:00+09:00</Time>
     </Item>
+    <Item>
+      <Source>gamestart.bmp</Source>
+      <Name>gamestart</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\gamestart.xnb</Output>
+      <Time>2016-07-21T10:10:36.5004463+09:00</Time>
+    </Item>
+    <Item>
+      <Source>stuffrole.bmp</Source>
+      <Name>stuffrole</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\stuffrole.xnb</Output>
+      <Time>2016-07-21T10:11:38.6566957+09:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <ContentProjectGUID Null="true" />

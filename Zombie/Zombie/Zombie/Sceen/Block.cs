@@ -25,7 +25,7 @@ namespace Zombie
 
         public void Draw(Renderer renderer)
         {
-            renderer.DrawTexture(name, position);
+            renderer.DrawTextureW(name, position);
         }
 
         public Vector2 GetPosition() {

@@ -33,7 +33,7 @@ namespace Zombie.Sceen
         }
         public void Draw(Renderer renderer) {
             renderer.Begin();
-            renderer.DrawTexture("ending", Vector2.Zero);
+            renderer.DrawTextureW("ending", Vector2.Zero);
             renderer.End();
         }
 

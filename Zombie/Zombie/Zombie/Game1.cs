@@ -61,6 +61,9 @@ namespace Zombie
             renderer.LoadTexture("beam");
             renderer.LoadTexture("title");
             renderer.LoadTexture("ending");
+            renderer.LoadTexture("gamestart");
+            renderer.LoadTexture("stuffrole");
+
             sound.LoadBGM("titlebgm");
             sound.LoadBGM("gameplaybgm");
             sound.LoadBGM("endingbgm");

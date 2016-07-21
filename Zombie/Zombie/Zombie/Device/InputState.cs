@@ -16,6 +16,8 @@ namespace Zombie
         public InputState() {
         }
 
+        public bool IsUp(){ return Keyboard.GetState ().IsKeyDown(Keys.Up); } //上
+        public bool IsDown() { return Keyboard.GetState().IsKeyDown(Keys.Down); } //下
         public bool IsA(){ return Keyboard.GetState ().IsKeyDown(Keys.A); } //左
         public bool IsD() { return Keyboard.GetState().IsKeyDown(Keys.D); } //右
         public bool IsW() { return Keyboard.GetState().IsKeyDown(Keys.W); } //ジャンプ
