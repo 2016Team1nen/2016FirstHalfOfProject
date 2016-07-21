@@ -40,10 +40,10 @@ namespace Zombie
             if (input.IsKeyDown(Keys.Space))
             {
                 if (rl > 0) {
-                    beamR.Add(new Beam("beam", 1, (position + new Vector2(size.X,0)), new Vector2(32, 32), Vector2.Zero, beamType, rl));
+                    beamR.Add(new Beam("beam", (position + new Vector2(size.X,0)), new Vector2(32, 32), Vector2.Zero, beamType, rl));
                 }
                 else {
-                    beamL.Add(new Beam("beam", 1, (position + new Vector2(-16, 0)), new Vector2(32, 32), Vector2.Zero, beamType, rl));
+                    beamL.Add(new Beam("beam", (position + new Vector2(-16, 0)), new Vector2(32, 32), Vector2.Zero, beamType, rl));
                 }
             }
 

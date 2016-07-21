@@ -7,24 +7,21 @@ using Microsoft.Xna.Framework.Input;
 
 namespace Zombie
 {
-    abstract class Character
+    abstract class Character : ActorObject
     {
-        protected string name;
+        //protected string name;
         protected int hp;
-        protected Vector2 position;
-        protected Vector2 velocity;
-        protected Vector2 size;
+        //protected Vector2 position;
+        //protected Vector2 velocity;
+        //protected Vector2 size;
         
         public Character(string name, int hp, Vector2 position, Vector2 size, Vector2 velocity)
+            :base(name,position,velocity, size)
         {
-            this.name = name;
             this.hp = hp;
-            this.position = position;
-            this.velocity = velocity;
-            this.size = size;
         }
 
-        public abstract void Update(GameTime gameTime);
+        //public abstract void Update(GameTime gameTime);
         protected void Falling() { velocity.Y += 1.0f; }
 
         public void IsBlock(Vector2 blockPosition, Vector2 bSize, bool isBlock)
@@ -75,10 +72,10 @@ namespace Zombie
 
         //Get
         public string GetName() { return name; }
-        public Vector2 GetPosition() { return position; }
-        public Vector2 GetSize() { return size; }
+        //public Vector2 GetPosition() { return position; }
+        //public Vector2 GetSize() { return size; }
         public int GetHp() { return hp; }
-        public Vector2 GetVelocity() { return velocity; }
+        //public Vector2 GetVelocity() { return velocity; }
 
         
         //////////////////////////////////////////////////////
@@ -86,8 +83,8 @@ namespace Zombie
 
         //Change
         public void ChangeHp(int hp) { this.hp = hp; }
-        public void ChangePosition(Vector2 position) { this.position = position; }
-        public void ChangeVelocity(Vector2 velocity) { this.velocity = velocity; }
+        //public void ChangePosition(Vector2 position) { this.position = position; }
+        //public void ChangeVelocity(Vector2 velocity) { this.velocity = velocity; }
 
 
         ////////////////////////////////////////////

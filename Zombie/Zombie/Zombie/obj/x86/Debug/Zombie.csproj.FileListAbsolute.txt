@@ -35,3 +35,29 @@ D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\titl
 D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\ZombieBGM.wma
 D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\gamestart.xnb
 D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\stuffrole.xnb
+E:\NEEC\K016A1862\Denshi Enzan Club\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\player.xnb
+E:\NEEC\K016A1862\Denshi Enzan Club\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\enemy.xnb
+E:\NEEC\K016A1862\Denshi Enzan Club\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\life.xnb
+E:\NEEC\K016A1862\Denshi Enzan Club\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\block.xnb
+E:\NEEC\K016A1862\Denshi Enzan Club\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\beam.xnb
+E:\NEEC\K016A1862\Denshi Enzan Club\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\title.xnb
+E:\NEEC\K016A1862\Denshi Enzan Club\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\ending.xnb
+E:\NEEC\K016A1862\Denshi Enzan Club\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\gamestart.xnb
+E:\NEEC\K016A1862\Denshi Enzan Club\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\stuffrole.xnb
+E:\NEEC\K016A1862\Denshi Enzan Club\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\endingbgm.xnb
+E:\NEEC\K016A1862\Denshi Enzan Club\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\gameplaybgm.xnb
+E:\NEEC\K016A1862\Denshi Enzan Club\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\titlebgm.xnb
+E:\NEEC\K016A1862\Denshi Enzan Club\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\ZombieBGM.xnb
+E:\NEEC\K016A1862\Denshi Enzan Club\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\endingse.xnb
+E:\NEEC\K016A1862\Denshi Enzan Club\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\gameplayse.xnb
+E:\NEEC\K016A1862\Denshi Enzan Club\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\titlese.xnb
+E:\NEEC\K016A1862\Denshi Enzan Club\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\endingbgm.wma
+E:\NEEC\K016A1862\Denshi Enzan Club\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\gameplaybgm.wma
+E:\NEEC\K016A1862\Denshi Enzan Club\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\titlebgm.wma
+E:\NEEC\K016A1862\Denshi Enzan Club\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\ZombieBGM.wma
+E:\NEEC\K016A1862\Denshi Enzan Club\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Zombie.exe
+E:\NEEC\K016A1862\Denshi Enzan Club\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Zombie.pdb
+E:\NEEC\K016A1862\Denshi Enzan Club\2016FirstHalfOfProject\Zombie\Zombie\Zombie\obj\x86\Debug\Zombie.csprojResolveAssemblyReference.cache
+E:\NEEC\K016A1862\Denshi Enzan Club\2016FirstHalfOfProject\Zombie\Zombie\Zombie\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+E:\NEEC\K016A1862\Denshi Enzan Club\2016FirstHalfOfProject\Zombie\Zombie\Zombie\obj\x86\Debug\Zombie.exe
+E:\NEEC\K016A1862\Denshi Enzan Club\2016FirstHalfOfProject\Zombie\Zombie\Zombie\obj\x86\Debug\Zombie.pdb

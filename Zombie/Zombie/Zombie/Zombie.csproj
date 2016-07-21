@@ -108,6 +108,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Active\ActorObject.cs" />
     <Compile Include="Active\Beam.cs" />
     <Compile Include="Device\DeviceManager.cs" />
     <Compile Include="Device\Select.cs" />

@@ -5,6 +5,8 @@ Content\block.xnb
 Content\beam.xnb
 Content\title.xnb
 Content\ending.xnb
+Content\gamestart.xnb
+Content\stuffrole.xnb
 Content\endingbgm.xnb
 Content\endingbgm.wma
 Content\gameplaybgm.xnb
@@ -16,5 +18,3 @@ Content\ZombieBGM.wma
 Content\endingse.xnb
 Content\gameplayse.xnb
 Content\titlese.xnb
-Content\gamestart.xnb
-Content\stuffrole.xnb
