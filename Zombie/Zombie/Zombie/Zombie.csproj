@@ -111,6 +111,7 @@
     <Compile Include="Character.cs" />
     <Compile Include="Device\InputState.cs" />
     <Compile Include="Device\IsCollision.cs" />
+    <Compile Include="Device\Motion.cs" />
     <Compile Include="EnemyA.cs" />
     <Compile Include="Floor.cs" />
     <Compile Include="Player.cs" />
@@ -119,6 +120,8 @@
     <Compile Include="Game1.cs" />
     <Compile Include="Device\Renderer.cs" />
     <Compile Include="Screen.cs" />
+    <Compile Include="Utility\Range.cs" />
+    <Compile Include="Utility\Timer.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Game.ico" />

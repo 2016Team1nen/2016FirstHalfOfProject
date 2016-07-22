@@ -31,3 +31,14 @@ D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\obj\x86\Debug\Zombie.cspro
 D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\obj\x86\Debug\Zombie.exe
 D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\obj\x86\Debug\Zombie.pdb
+C:\Users\k016a1312\Documents\2016FirstHalfOfProject2\Zombie\Zombie\Zombie\bin\x86\Debug\Content\player.xnb
+C:\Users\k016a1312\Documents\2016FirstHalfOfProject2\Zombie\Zombie\Zombie\bin\x86\Debug\Content\enemy.xnb
+C:\Users\k016a1312\Documents\2016FirstHalfOfProject2\Zombie\Zombie\Zombie\bin\x86\Debug\Content\life.xnb
+C:\Users\k016a1312\Documents\2016FirstHalfOfProject2\Zombie\Zombie\Zombie\bin\x86\Debug\Content\block.xnb
+C:\Users\k016a1312\Documents\2016FirstHalfOfProject2\Zombie\Zombie\Zombie\bin\x86\Debug\Content\beam.xnb
+C:\Users\k016a1312\Documents\2016FirstHalfOfProject2\Zombie\Zombie\Zombie\bin\x86\Debug\Zombie.exe
+C:\Users\k016a1312\Documents\2016FirstHalfOfProject2\Zombie\Zombie\Zombie\bin\x86\Debug\Zombie.pdb
+C:\Users\k016a1312\Documents\2016FirstHalfOfProject2\Zombie\Zombie\Zombie\obj\x86\Debug\Zombie.csprojResolveAssemblyReference.cache
+C:\Users\k016a1312\Documents\2016FirstHalfOfProject2\Zombie\Zombie\Zombie\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\k016a1312\Documents\2016FirstHalfOfProject2\Zombie\Zombie\Zombie\obj\x86\Debug\Zombie.exe
+C:\Users\k016a1312\Documents\2016FirstHalfOfProject2\Zombie\Zombie\Zombie\obj\x86\Debug\Zombie.pdb
