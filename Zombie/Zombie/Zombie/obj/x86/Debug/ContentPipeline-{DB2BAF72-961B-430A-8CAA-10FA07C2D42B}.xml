@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
+  <Asset Type="Pipeline:BuildItemCollection">
+    <Item>
+      <Source>player.BMP</Source>
+      <Name>player</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\k016a1312\Documents\2016FirstHalfOfProject2\Zombie\Zombie\Zombie\bin\x86\Debug\Content\player.xnb</Output>
+      <Time>2016-07-22T21:20:49.7329882+09:00</Time>
+    </Item>
+    <Item>
+      <Source>enemy.png</Source>
+      <Name>enemy</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\k016a1312\Documents\2016FirstHalfOfProject2\Zombie\Zombie\Zombie\bin\x86\Debug\Content\enemy.xnb</Output>
+      <Time>2016-07-22T21:20:49.7003989+09:00</Time>
+    </Item>
+    <Item>
+      <Source>life.png</Source>
+      <Name>life</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\k016a1312\Documents\2016FirstHalfOfProject2\Zombie\Zombie\Zombie\bin\x86\Debug\Content\life.xnb</Output>
+      <Time>2016-07-22T21:20:49.7084203+09:00</Time>
+    </Item>
+    <Item>
+      <Source>block.jpg</Source>
+      <Name>block</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\k016a1312\Documents\2016FirstHalfOfProject2\Zombie\Zombie\Zombie\bin\x86\Debug\Content\block.xnb</Output>
+      <Time>2016-07-22T21:20:49.6943825+09:00</Time>
+    </Item>
+    <Item>
+      <Source>beam.BMP</Source>
+      <Name>beam</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\k016a1312\Documents\2016FirstHalfOfProject2\Zombie\Zombie\Zombie\bin\x86\Debug\Content\beam.xnb</Output>
+      <Time>2016-07-22T21:20:49.6863612+09:00</Time>
+    </Item>
+    <BuildSuccessful>true</BuildSuccessful>
+    <Settings>
+      <ContentProjectGUID>{DB2BAF72-961B-430A-8CAA-10FA07C2D42B}</ContentProjectGUID>
+      <TargetPlatform>Windows</TargetPlatform>
+      <TargetProfile>HiDef</TargetProfile>
+      <BuildConfiguration>Debug</BuildConfiguration>
+      <CompressContent>false</CompressContent>
+      <RootDirectory>C:\Users\k016a1312\Documents\2016FirstHalfOfProject2\Zombie\Zombie\ZombieContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\k016a1312\Documents\2016FirstHalfOfProject2\Zombie\Zombie\Zombie\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\k016a1312\Documents\2016FirstHalfOfProject2\Zombie\Zombie\Zombie\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\k016a1312\Documents\2016FirstHalfOfProject2\Zombie\Zombie\Zombie\bin\x86\Debug\Content\</OutputDirectory>
+    </Settings>
+    <Assemblies>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
+        <Value>2011-09-01T16:22:30+09:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
+        <Value>2011-09-01T16:22:30+09:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
+        <Value>2011-09-01T16:22:30+09:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
+        <Value>2011-09-01T16:22:30+09:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
+        <Value>2011-09-01T16:22:30+09:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
+        <Value>2011-09-01T16:22:30+09:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2016-04-28T11:15:31.7117013+09:00</Value>
+      </Assembly>
+    </Assemblies>
+  </Asset>
+</XnaContent>
