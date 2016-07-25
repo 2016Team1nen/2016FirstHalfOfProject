@@ -61,3 +61,29 @@ E:\NEEC\K016A1862\Denshi Enzan Club\2016FirstHalfOfProject\Zombie\Zombie\Zombie\
 E:\NEEC\K016A1862\Denshi Enzan Club\2016FirstHalfOfProject\Zombie\Zombie\Zombie\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 E:\NEEC\K016A1862\Denshi Enzan Club\2016FirstHalfOfProject\Zombie\Zombie\Zombie\obj\x86\Debug\Zombie.exe
 E:\NEEC\K016A1862\Denshi Enzan Club\2016FirstHalfOfProject\Zombie\Zombie\Zombie\obj\x86\Debug\Zombie.pdb
+F:\学校\課外活動\densan\Zombie\Zombie\Zombie\obj\x86\Debug\Zombie.csprojResolveAssemblyReference.cache
+F:\学校\課外活動\densan\Zombie\Zombie\Zombie\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+F:\学校\課外活動\densan\Zombie\Zombie\Zombie\obj\x86\Debug\Zombie.exe
+F:\学校\課外活動\densan\Zombie\Zombie\Zombie\obj\x86\Debug\Zombie.pdb
+F:\学校\課外活動\densan\Zombie\Zombie\Zombie\bin\x86\Debug\Content\player.xnb
+F:\学校\課外活動\densan\Zombie\Zombie\Zombie\bin\x86\Debug\Content\enemy.xnb
+F:\学校\課外活動\densan\Zombie\Zombie\Zombie\bin\x86\Debug\Content\life.xnb
+F:\学校\課外活動\densan\Zombie\Zombie\Zombie\bin\x86\Debug\Content\block.xnb
+F:\学校\課外活動\densan\Zombie\Zombie\Zombie\bin\x86\Debug\Content\beam.xnb
+F:\学校\課外活動\densan\Zombie\Zombie\Zombie\bin\x86\Debug\Content\title.xnb
+F:\学校\課外活動\densan\Zombie\Zombie\Zombie\bin\x86\Debug\Content\ending.xnb
+F:\学校\課外活動\densan\Zombie\Zombie\Zombie\bin\x86\Debug\Content\gamestart.xnb
+F:\学校\課外活動\densan\Zombie\Zombie\Zombie\bin\x86\Debug\Content\stuffrole.xnb
+F:\学校\課外活動\densan\Zombie\Zombie\Zombie\bin\x86\Debug\Content\endingbgm.xnb
+F:\学校\課外活動\densan\Zombie\Zombie\Zombie\bin\x86\Debug\Content\gameplaybgm.xnb
+F:\学校\課外活動\densan\Zombie\Zombie\Zombie\bin\x86\Debug\Content\titlebgm.xnb
+F:\学校\課外活動\densan\Zombie\Zombie\Zombie\bin\x86\Debug\Content\ZombieBGM.xnb
+F:\学校\課外活動\densan\Zombie\Zombie\Zombie\bin\x86\Debug\Content\endingse.xnb
+F:\学校\課外活動\densan\Zombie\Zombie\Zombie\bin\x86\Debug\Content\gameplayse.xnb
+F:\学校\課外活動\densan\Zombie\Zombie\Zombie\bin\x86\Debug\Content\titlese.xnb
+F:\学校\課外活動\densan\Zombie\Zombie\Zombie\bin\x86\Debug\Content\endingbgm.wma
+F:\学校\課外活動\densan\Zombie\Zombie\Zombie\bin\x86\Debug\Content\gameplaybgm.wma
+F:\学校\課外活動\densan\Zombie\Zombie\Zombie\bin\x86\Debug\Content\titlebgm.wma
+F:\学校\課外活動\densan\Zombie\Zombie\Zombie\bin\x86\Debug\Content\ZombieBGM.wma
+F:\学校\課外活動\densan\Zombie\Zombie\Zombie\bin\x86\Debug\Zombie.exe
+F:\学校\課外活動\densan\Zombie\Zombie\Zombie\bin\x86\Debug\Zombie.pdb

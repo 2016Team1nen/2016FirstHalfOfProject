@@ -24,10 +24,12 @@ namespace Zombie.Sceen
         private IsCollision isCollision;
         private Sound sound;
         private bool isEnd;
+        private Camera camera;
 
         public GamePlay(DeviceManager deviceManager) {
             isCollision = deviceManager.GetIsCollision();
             sound = deviceManager.GetSound();
+            camera = new Camera();
         }
 
         public void Initialize() {
@@ -57,6 +59,8 @@ namespace Zombie.Sceen
 
             //playerの動き
             player.Update(gameTime);
+            //camera
+            camera.Update(player.Position);
 
             //ListGet
             beamL = ((Player)player).GetBeamL();
@@ -90,7 +94,7 @@ namespace Zombie.Sceen
             }
 
             //windowとのあたり判定
-            player.ChangePosition(isCollision.Collision(player.GetPosition()));
+            //player.ChangePosition(isCollision.Collision(player.GetPosition()));
 
             //敵のあたり判定
             foreach (var e in enemy) {
@@ -130,7 +134,8 @@ namespace Zombie.Sceen
 
 
         public void Draw(Renderer renderer) {
-            renderer.Begin();
+            renderer.DrawCamera(camera, player.GetPosition()) ;
+            
 
             //playerの向きをチェック
             int rf;

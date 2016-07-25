@@ -50,6 +50,9 @@ namespace Zombie.Sceen
             }
             currentSceen.Draw(renderer);
         }
-
+        public void cameraDraw(Camera camera,Player player)
+        {
+            cameraDraw(camera,player);
+        }
     }
 }

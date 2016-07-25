@@ -22,6 +22,9 @@ namespace Zombie
         private Renderer renderer;
         private Sound sound;
 
+        Camera camera = new Camera();
+        Player player = new Player("player", 3, new Vector2(0, Screen.screenHeight - 64 * 2), new Vector2(64, 64), Vector2.Zero);
+
 
         public Game1()
         {
@@ -89,12 +92,12 @@ namespace Zombie
             // TODO: Add your update logic here
             deviceManager.Update(gameTime);
             sceenManager.Update(gameTime);
-
             base.Update(gameTime);
         }
 
         protected override void Draw(GameTime gameTime)
         {
+
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             // TODO: Add your drawing code here

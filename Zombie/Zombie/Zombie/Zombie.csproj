@@ -124,6 +124,7 @@
     <Compile Include="Game1.cs" />
     <Compile Include="Device\Renderer.cs" />
     <Compile Include="Fed\Screen.cs" />
+    <Compile Include="Sceen\Camera.cs" />
     <Compile Include="Sceen\Ending.cs" />
     <Compile Include="Sceen\GamePlay.cs" />
     <Compile Include="Sceen\ISceen.cs" />
