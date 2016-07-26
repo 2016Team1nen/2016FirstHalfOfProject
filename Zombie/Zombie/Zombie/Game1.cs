@@ -55,7 +55,8 @@ namespace Zombie
             // Create a new SpriteBatch, which can be used to draw textures.
 
             renderer.LoadTexture("player");
-            renderer.LoadTexture("enemy");
+            renderer.LoadTexture("enemyA");
+            renderer.LoadTexture("enemyB");
             renderer.LoadTexture("life");
             renderer.LoadTexture("block");
             renderer.LoadTexture("beam");
@@ -63,6 +64,8 @@ namespace Zombie
             renderer.LoadTexture("ending");
             renderer.LoadTexture("gamestart");
             renderer.LoadTexture("stuffrole");
+            renderer.LoadTexture("sky");
+            renderer.LoadTexture("goal");
 
             sound.LoadBGM("titlebgm");
             sound.LoadBGM("gameplaybgm");

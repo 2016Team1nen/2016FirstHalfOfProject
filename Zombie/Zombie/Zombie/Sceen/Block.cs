@@ -38,21 +38,25 @@ namespace Zombie
         }
 
         public List<Block> Screen1() {
-            Vector2 p = new Vector2(192 * 3, Screen.screenHeight - 64 * 5);
-            block.Add(new Block("block", p, new Vector2(192, 64)));
-
-            p = new Vector2(192 * 2, Screen.screenHeight - 64 * 2);
-            while (p.X < Screen.screenWidth - 192*2)
+            Vector2 p = new Vector2(32 * 25, Screen.screenHeight - 32 * 11);
+            while (p.X < Screen.screenWidth - 32 * 2)
             {
-                block.Add(new Block("block", p, new Vector2(192, 64)));
-                p.X += 192;
+                block.Add(new Block("block", p, new Vector2(32, 32)));
+                p.X += 32;
             }
 
-            p = new Vector2(0, Screen.screenHeight - 64);
-            while (p.X < Screen.screenWidth)
+            p = new Vector2(32 * 10, Screen.screenHeight - 32 * 2);
+            while (p.X < 1500)
             {
-                block.Add(new Block("block", p, new Vector2(192, 64)));
-                p.X += 192;
+                block.Add(new Block("block", p, new Vector2(32, 32)));
+                p.X += 32;
+            }
+
+            p = new Vector2(0, Screen.screenHeight - 32);
+            while (p.X < 6000)
+            {
+                block.Add(new Block("block", p, new Vector2(32, 32)));
+                p.X += 32;
             }
 
             return block;

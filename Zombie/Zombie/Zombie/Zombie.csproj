@@ -109,7 +109,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Active\Beam.cs" />
+    <Compile Include="Active\EnemyB.cs" />
+    <Compile Include="Device\Camera.cs" />
     <Compile Include="Device\DeviceManager.cs" />
+    <Compile Include="Device\Motion.cs" />
     <Compile Include="Device\Select.cs" />
     <Compile Include="Device\Sound.cs" />
     <Compile Include="Sceen\Block.cs" />
@@ -129,6 +132,8 @@
     <Compile Include="Sceen\IsSceen.cs" />
     <Compile Include="Sceen\SceenManager.cs" />
     <Compile Include="Sceen\Title.cs" />
+    <Compile Include="Utility\Range.cs" />
+    <Compile Include="Utility\Timer.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Game.ico" />

@@ -14,14 +14,16 @@ namespace Zombie
         protected Vector2 position;
         protected Vector2 velocity;
         protected Vector2 size;
-        
-        public Character(string name, int hp, Vector2 position, Vector2 size, Vector2 velocity)
-        {
+
+        protected bool isblock;
+
+        public Character(string name, int hp, Vector2 position, Vector2 size, Vector2 velocity) {
             this.name = name;
             this.hp = hp;
             this.position = position;
             this.velocity = velocity;
             this.size = size;
+            isblock = false;
         }
 
         public abstract void Update(GameTime gameTime);
@@ -29,6 +31,8 @@ namespace Zombie
 
         public void IsBlock(Vector2 blockPosition, Vector2 bSize, bool isBlock)
         {
+            isblock = isBlock;
+
             //左から行く(○)
             if (isBlock && position.X <= (blockPosition.X - 59) &&
                 position.Y < (blockPosition + bSize).Y &&
@@ -65,38 +69,30 @@ namespace Zombie
             else { position.X -= 150; }
         }
 
-
         //死亡判断
         public bool IsDeath() { return !(hp > 0); }
 
-
         ////////////////////////////////////////////
-        
 
-        //Get
+        //Get,Set
         public string GetName() { return name; }
-        public Vector2 GetPosition() { return position; }
-        public Vector2 GetSize() { return size; }
-        public int GetHp() { return hp; }
-        public Vector2 GetVelocity() { return velocity; }
 
-        
-        //////////////////////////////////////////////////////
-        
+        public int Hp { 
+            get { return hp; }
+            set { hp = value; }
+        }
 
-        //Change
-        public void ChangeHp(int hp) { this.hp = hp; }
-        public void ChangePosition(Vector2 position) { this.position = position; }
-        public void ChangeVelocity(Vector2 velocity) { this.velocity = velocity; }
-
+        public Vector2 Position { 
+            get { return position; }
+            set { position = value; }
+        }
+        public Vector2 Velocity { get { return velocity; } }
+        public Vector2 Size { get { return size; } }
 
         ////////////////////////////////////////////
-
 
         //Draw
-        public void Draw(Renderer renderer) { renderer.DrawTextureW(name, position); }
-        public void Draw(Renderer renderer, int rf) { renderer.Draw(name, position, rf); }
-
+        public virtual void Draw(Renderer renderer) { renderer.DrawTextureW(name, position); }
 
         //RefPosition、実装していない
         public void SetPosition(ref Vector2 other) { other = position; }

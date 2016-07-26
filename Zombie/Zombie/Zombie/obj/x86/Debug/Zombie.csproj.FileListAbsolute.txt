@@ -14,7 +14,6 @@ D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\obj\x86\Debug\Microsoft.Xn
 D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\obj\x86\Debug\Zombie.exe
 D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\obj\x86\Debug\Zombie.pdb
 D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\player.xnb
-D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\enemy.xnb
 D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\life.xnb
 D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\block.xnb
 D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\beam.xnb
@@ -25,13 +24,15 @@ D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\endi
 D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\endingbgm.xnb
 D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\gameplaybgm.xnb
 D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\titlebgm.xnb
-D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\ZombieBGM.xnb
 D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\endingse.xnb
 D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\gameplayse.xnb
 D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\titlese.xnb
 D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\endingbgm.wma
 D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\gameplaybgm.wma
 D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\titlebgm.wma
-D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\ZombieBGM.wma
 D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\gamestart.xnb
 D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\stuffrole.xnb
+D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\sky.xnb
+D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\goal.xnb
+D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\enemyA.xnb
+D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\enemyB.xnb

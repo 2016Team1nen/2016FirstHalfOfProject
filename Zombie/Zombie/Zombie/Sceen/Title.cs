@@ -26,6 +26,7 @@ namespace Zombie.Sceen
         public void Initialize() {
             isEnd = false;
         }
+
         public void Update(GameTime gameTime) {
             sound.PlayeBGM("titlebgm");
             select.SelectT();
@@ -40,10 +41,14 @@ namespace Zombie.Sceen
         public void Draw(Renderer renderer) {
             renderer.Begin();
             renderer.DrawTextureW("title", Vector2.Zero);
-            if (s == 0) 
-            { renderer.DrawTextureG("gamestart", new Vector2(430, 400)); }
-            else if (s == 1) 
-            { renderer.DrawTextureG("stuffrole", new Vector2(430, 490)); }
+            if (s == 0) {
+                renderer.DrawTextureG("gamestart", new Vector2(430, 400));
+                renderer.DrawTextureW("stuffrole", new Vector2(430, 490)); 
+            }
+            else if (s == 1) {
+                renderer.DrawTextureW("gamestart", new Vector2(430, 400));
+                renderer.DrawTextureG("stuffrole", new Vector2(430, 490));
+            }
             renderer.End();
         }
         public bool IsEnd() {

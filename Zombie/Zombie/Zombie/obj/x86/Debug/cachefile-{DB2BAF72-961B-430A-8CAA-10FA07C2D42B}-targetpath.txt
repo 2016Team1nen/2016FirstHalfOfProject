@@ -1,9 +1,5 @@
-Content\player.xnb
-Content\enemy.xnb
 Content\life.xnb
-Content\block.xnb
 Content\beam.xnb
-Content\title.xnb
 Content\ending.xnb
 Content\endingbgm.xnb
 Content\endingbgm.wma
@@ -11,10 +7,15 @@ Content\gameplaybgm.xnb
 Content\gameplaybgm.wma
 Content\titlebgm.xnb
 Content\titlebgm.wma
-Content\ZombieBGM.xnb
-Content\ZombieBGM.wma
 Content\endingse.xnb
 Content\gameplayse.xnb
 Content\titlese.xnb
+Content\sky.xnb
+Content\block.xnb
+Content\title.xnb
+Content\goal.xnb
+Content\player.xnb
 Content\gamestart.xnb
 Content\stuffrole.xnb
+Content\enemyA.xnb
+Content\enemyB.xnb

@@ -15,6 +15,7 @@ namespace Zombie.Device
         private IsCollision isCollision;
         private Sound sound;
         private Select select;
+        private Camera camera;
         private static Random rnd = new Random();
 
         public DeviceManager(ContentManager content,GraphicsDevice graphics) {
@@ -23,10 +24,10 @@ namespace Zombie.Device
             isCollision = new IsCollision();
             sound = new Sound(content);
             select = new Select();
+            camera = new Camera();
         }
 
-        public void Update(GameTime gameTime) {
-        }
+        public void Update(GameTime gameTime) { }
 
         public Renderer GetRenderer() { return renderer; }
         public InputState GetInputState() { return inputState; }
@@ -34,5 +35,6 @@ namespace Zombie.Device
         public IsCollision GetIsCollision() { return isCollision; }
         public Random GetRandom() { return rnd; }
         public Select GetSelect() { return select; }
+        public Camera GetCamera() { return camera; }
     }
 }
