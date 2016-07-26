@@ -117,14 +117,14 @@ namespace Zombie
         //rl : right=1,left=-1
         private void Move() {
             float speed = 5;
-            if (input.IsA()) { velocity.X = -1; rl = -1; }
-            else if (input.IsD()) { velocity.X = 1; rl = 1; }
+            if (input.IsDown(Keys.Left)) { velocity.X = -1; rl = -1; }
+            else if (input.IsDown(Keys.Right)) { velocity.X = 1; rl = 1; }
             else { velocity.X = 0;  }
             position.X += velocity.X * speed;
         }
 
         private void Jump() {
-            if (velocity.Y == 0 && input.IsW()) {
+            if (velocity.Y == 0 && input.IsDown(Keys.Up)) {
                 velocity.Y -= 25.6f;
             }
             position.Y += velocity.Y;
@@ -135,7 +135,7 @@ namespace Zombie
         public List<Beam> GetBeamR() { return beamR; }
 
         public override void Draw(Renderer renderer) {
-            renderer.DrawTexture(name, position, motion.DrawingRange());
+            renderer.DrawTexture(name, position, motion.DrawingRange(), alpha);
         }
 
     }

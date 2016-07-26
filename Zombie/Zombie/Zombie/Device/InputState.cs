@@ -16,13 +16,8 @@ namespace Zombie
         public InputState() {
         }
 
-        public bool IsUp(){ return Keyboard.GetState ().IsKeyDown(Keys.Up); } //上
-        public bool IsDown() { return Keyboard.GetState().IsKeyDown(Keys.Down); } //下
-        public bool IsA(){ return Keyboard.GetState ().IsKeyDown(Keys.A); } //左
-        public bool IsD() { return Keyboard.GetState().IsKeyDown(Keys.D); } //右
-        public bool IsW() { return Keyboard.GetState().IsKeyDown(Keys.W); } //ジャンプ
-        public bool IsSpace() { return Keyboard.GetState().IsKeyDown(Keys.Space); } //シュート
-        public bool IsQ() { return Keyboard.GetState().IsKeyDown(Keys.Q); } //弾の切り替え
+        //押しっぱなし
+        public bool IsDown(Keys key) { return Keyboard.GetState().IsKeyDown(key); }
 
         //Keyの状態をチェックするメソッド
         public void UpdateKey(KeyboardState keyState)
@@ -30,6 +25,8 @@ namespace Zombie
             previousKey = currentKey;
             currentKey = keyState;
         }
+
+        //一回押した
         public bool IsKeyDown(Keys key)
         {
             bool current = currentKey.IsKeyDown(key);

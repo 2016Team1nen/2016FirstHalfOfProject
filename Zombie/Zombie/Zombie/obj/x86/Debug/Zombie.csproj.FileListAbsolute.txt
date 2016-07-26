@@ -36,3 +36,7 @@ D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\sky.
 D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\goal.xnb
 D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\enemyA.xnb
 D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\enemyB.xnb
+D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\start.xnb
+D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\gameclear.xnb
+D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\monsterA.xnb
+D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\monsterB.xnb

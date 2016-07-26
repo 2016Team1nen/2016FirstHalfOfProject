@@ -42,7 +42,9 @@ namespace Zombie
             sceenManager.Add(IsSceen.TITLE, new Title(deviceManager));
 
             ISceen gamePlay = new GamePlay(deviceManager);
+            
             sceenManager.Add(Sceen.IsSceen.GAMEPLAY, gamePlay);
+            sceenManager.Add(Sceen.IsSceen.CLEAR, new Clear(deviceManager));
             sceenManager.Add(Sceen.IsSceen.ENDING, new Ending(deviceManager));
 
             sceenManager.Change(Sceen.IsSceen.TITLE);
@@ -57,6 +59,8 @@ namespace Zombie
             renderer.LoadTexture("player");
             renderer.LoadTexture("enemyA");
             renderer.LoadTexture("enemyB");
+            renderer.LoadTexture("monsterA");
+            renderer.LoadTexture("monsterB");
             renderer.LoadTexture("life");
             renderer.LoadTexture("block");
             renderer.LoadTexture("beam");
@@ -66,6 +70,8 @@ namespace Zombie
             renderer.LoadTexture("stuffrole");
             renderer.LoadTexture("sky");
             renderer.LoadTexture("goal");
+            renderer.LoadTexture("start");
+            renderer.LoadTexture("gameclear");
 
             sound.LoadBGM("titlebgm");
             sound.LoadBGM("gameplaybgm");

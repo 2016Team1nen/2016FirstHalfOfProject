@@ -19,3 +19,7 @@ Content\gamestart.xnb
 Content\stuffrole.xnb
 Content\enemyA.xnb
 Content\enemyB.xnb
+Content\start.xnb
+Content\gameclear.xnb
+Content\monsterA.xnb
+Content\monsterB.xnb

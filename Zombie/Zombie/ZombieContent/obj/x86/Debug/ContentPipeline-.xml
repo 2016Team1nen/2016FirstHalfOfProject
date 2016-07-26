@@ -119,7 +119,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\goal.xnb</Output>
-      <Time>2016-07-21T04:06:04+09:00</Time>
+      <Time>2016-07-26T18:36:29.4019453+09:00</Time>
     </Item>
     <Item>
       <Source>player.png</Source>
@@ -155,7 +155,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\enemyA.xnb</Output>
-      <Time>2016-07-26T00:59:12.9837809+09:00</Time>
+      <Time>2016-07-26T20:11:45.9328283+09:00</Time>
     </Item>
     <Item>
       <Source>enemyB.png</Source>
@@ -164,7 +164,43 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\enemyB.xnb</Output>
-      <Time>2016-07-26T00:59:02.2185078+09:00</Time>
+      <Time>2016-07-26T20:11:44.1243168+09:00</Time>
+    </Item>
+    <Item>
+      <Source>start.png</Source>
+      <Name>start</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\start.xnb</Output>
+      <Time>2016-07-26T18:37:13.8775555+09:00</Time>
+    </Item>
+    <Item>
+      <Source>gameclear.jpg</Source>
+      <Name>gameclear</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\gameclear.xnb</Output>
+      <Time>2016-07-26T18:51:04+09:00</Time>
+    </Item>
+    <Item>
+      <Source>monsterA.png</Source>
+      <Name>monsterA</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\monsterA.xnb</Output>
+      <Time>2016-07-26T22:42:13.0247801+09:00</Time>
+    </Item>
+    <Item>
+      <Source>monsterB.png</Source>
+      <Name>monsterB</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\monsterB.xnb</Output>
+      <Time>2016-07-26T22:57:26.252584+09:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

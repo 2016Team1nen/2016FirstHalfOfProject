@@ -13,7 +13,7 @@ namespace Zombie
         private bool isPursue;
         private Motion motion;
         
-        public enum Direction { RIGHT, LEFT }
+        public enum Direction { RIGHT, LEFT,STAND }
         private Direction direction;
 
         public EnemyB(string name, int hp, Vector2 position, Vector2 size, Vector2 velocity)
@@ -29,7 +29,8 @@ namespace Zombie
             for (int i = 0; i < 6; i++) {
                 motion.Add(i, new Rectangle(140 * (i % 3), 250 * (int)(i / 3), 140, 250));
             }
-            motion.Initialize(new Range(0, 5), new Timer(0.2f));
+            motion.Add(6, new Rectangle(140 * 0, 250 * 2, 140, 250));
+            motion.Initialize(new Range(0, 6), new Timer(0.2f));
 
             //最初は右向き
             direction = Direction.RIGHT;
@@ -39,7 +40,7 @@ namespace Zombie
         public void Move(Vector2 player) {
             Falling();
             Pursue(player);
-            if (isPursue) { velocity.X = -5;  }
+            if (isPursue && hp > 0) { velocity.X = -5;  }
             position += velocity;
         }
 
@@ -53,8 +54,14 @@ namespace Zombie
         public override void Update(GameTime gameTime) { 
             motion.Update(gameTime);
             Timer timer = new Timer(1.0f);
+            if (velocity.X == 0.0f && hp > 0) { motion.Initialize(new Range(0, 0), timer); }
 
-            if (velocity.X == 0.0f) { motion.Initialize(new Range(0, 0), timer); }
+            else if ((hp <= 0) && direction != Direction.STAND)
+            {
+                direction = Direction.STAND;
+                timer = new Timer(3.0f);
+                motion.Initialize(new Range(6, 6), timer);
+            }
 
             else if ((velocity.X < 0.0f) && direction != Direction.LEFT) {
                 direction = Direction.LEFT;
@@ -69,7 +76,7 @@ namespace Zombie
 
 
         public override void Draw(Renderer renderer) {
-            renderer.DrawTexture(name, position, motion.DrawingRange());
+            renderer.DrawTexture(name, position, motion.DrawingRange(),alpha);
         }
 
     }

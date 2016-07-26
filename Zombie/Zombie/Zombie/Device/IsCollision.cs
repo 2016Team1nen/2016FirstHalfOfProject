@@ -19,7 +19,7 @@ namespace Zombie.Device
 
         //windowsとのあたり判定
         public Vector2 Collision(Vector2 active) {
-            active = Vector2.Clamp(active, new Vector2(500, -500), new Vector2(6000 - 64, Screen.screenHeight - 64));
+            active = Vector2.Clamp(active, new Vector2(500, -500), new Vector2(9000 - 64, Screen.screenHeight - 64));
             return active;
         }
     }

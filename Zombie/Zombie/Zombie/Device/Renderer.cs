@@ -24,6 +24,7 @@ namespace Zombie
         }
 
         public void LoadTexture(string name, string filepath = "./") {
+            
             textures.Add(name, contentManager.Load<Texture2D>(filepath + name));
         }
 
@@ -32,7 +33,7 @@ namespace Zombie
         public void End() { spriteBatch.End(); }
 
         // 通用
-        public void DrawTextureW(string name, Vector2 position, float alpha = 1.0f) {
+        public void DrawTextureW(string name, Vector2 position, float alpha = 1.0f){
             spriteBatch.Draw(textures[name], position, Color.White * alpha);
         }
         public void DrawTextureG(string name, Vector2 position, float alpha = 1.0f) {
@@ -47,7 +48,7 @@ namespace Zombie
         }
 
         //Character
-        public void DrawTexture(string name, Vector2 positiion, Rectangle rect, float alpha = 1.0f) {
+        public void DrawTexture(string name, Vector2 positiion, Rectangle rect, float alpha) {
             spriteBatch.Draw(textures[name], positiion, rect, Color.White * alpha);
         }
 

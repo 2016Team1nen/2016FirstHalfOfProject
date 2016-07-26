@@ -26,8 +26,8 @@ namespace Zombie.Device
             if (position.Y < -0) { position.Y = -0; }
 
             //scaleはズームの量
-            if (Keyboard.GetState().IsKeyDown(Keys.Up)) { scale += 0.01f; }
-            else if (Keyboard.GetState().IsKeyDown(Keys.Down)) { scale -= 0.01f; }
+            if (Keyboard.GetState().IsKeyDown(Keys.W)) { scale += 0.01f; }
+            else if (Keyboard.GetState().IsKeyDown(Keys.S)) { scale -= 0.01f; }
 
             viewMatrix = Matrix.CreateTranslation(new Vector3(new Vector2(500,0) - position, 0)) * Matrix.CreateScale(scale);
         }

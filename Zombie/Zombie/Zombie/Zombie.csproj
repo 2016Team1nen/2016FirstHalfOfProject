@@ -110,6 +110,8 @@
   <ItemGroup>
     <Compile Include="Active\Beam.cs" />
     <Compile Include="Active\EnemyB.cs" />
+    <Compile Include="Active\MonsterA.cs" />
+    <Compile Include="Active\MonsterB.cs" />
     <Compile Include="Device\Camera.cs" />
     <Compile Include="Device\DeviceManager.cs" />
     <Compile Include="Device\Motion.cs" />
@@ -126,6 +128,7 @@
     <Compile Include="Game1.cs" />
     <Compile Include="Device\Renderer.cs" />
     <Compile Include="Fed\Screen.cs" />
+    <Compile Include="Sceen\Clear.cs" />
     <Compile Include="Sceen\Ending.cs" />
     <Compile Include="Sceen\GamePlay.cs" />
     <Compile Include="Sceen\ISceen.cs" />

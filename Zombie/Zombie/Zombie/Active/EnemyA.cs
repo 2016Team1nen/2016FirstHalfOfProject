@@ -14,7 +14,7 @@ namespace Zombie
         private Vector2 roop;
         private Motion motion;
 
-        public enum Direction { RIGHT, LEFT }
+        public enum Direction { RIGHT, LEFT, STAND }
         private Direction direction;
 
         public EnemyA(string name, int hp, Vector2 position, Vector2 size, Vector2 velocity)
@@ -29,10 +29,10 @@ namespace Zombie
             motion = new Motion();
 
             //RUN
-            for (int i = 0; i < 6; i++){
+            for (int i = 0; i < 9; i++){
                 motion.Add(i, new Rectangle(140 * (i % 3), 250 * (int)(i / 3), 140, 250));
             }
-            motion.Initialize(new Range(0, 5), new Timer(0.2f));
+            motion.Initialize(new Range(0, 8), new Timer(0.2f));
 
             //最初は左向き
             direction = Direction.LEFT;
@@ -63,19 +63,27 @@ namespace Zombie
         public override void Update(GameTime gameTime) {
             motion.Update(gameTime);
             Timer timer = new Timer(1.0f);
-            if ((velocity.X < 0.0f) && direction != Direction.LEFT) {
+
+            if ((hp <= 0.0f) && direction != Direction.STAND){
+                direction = Direction.STAND;
+                timer = new Timer(3.0f);
+                motion.Initialize(new Range(6, 8), timer);
+            }
+
+            else  if ((velocity.X < 0.0f) && direction != Direction.LEFT){
                 direction = Direction.LEFT;
                 motion.Initialize(new Range(3, 5), timer);
             }
 
-            else if ((velocity.X > 0.0f) && direction != Direction.RIGHT) {
+            else if ((velocity.X > 0.0f) && direction != Direction.RIGHT){
                 direction = Direction.RIGHT;
                 motion.Initialize(new Range(0, 2), timer);
             }
+
         }
 
         public override void Draw(Renderer renderer) {
-            renderer.DrawTexture(name, position, motion.DrawingRange());
+            renderer.DrawTexture(name, position, motion.DrawingRange(),alpha);
         }
 
     }

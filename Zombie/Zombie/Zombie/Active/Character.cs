@@ -14,6 +14,7 @@ namespace Zombie
         protected Vector2 position;
         protected Vector2 velocity;
         protected Vector2 size;
+        protected float alpha;
 
         protected bool isblock;
 
@@ -24,6 +25,7 @@ namespace Zombie
             this.velocity = velocity;
             this.size = size;
             isblock = false;
+            alpha = 1.0f;
         }
 
         public abstract void Update(GameTime gameTime);
@@ -70,7 +72,11 @@ namespace Zombie
         }
 
         //死亡判断
-        public bool IsDeath() { return !(hp > 0); }
+        public void IsDeath() { 
+            if (hp > 0) { return;}
+            velocity = Vector2.Zero;
+            alpha -= 0.005f;
+        }
 
         ////////////////////////////////////////////
 
@@ -88,11 +94,15 @@ namespace Zombie
         }
         public Vector2 Velocity { get { return velocity; } }
         public Vector2 Size { get { return size; } }
+        public float Alpha { 
+            get { return alpha; }
+            set { alpha = value; }
+        }
 
         ////////////////////////////////////////////
 
         //Draw
-        public virtual void Draw(Renderer renderer) { renderer.DrawTextureW(name, position); }
+        public virtual void Draw(Renderer renderer) { renderer.DrawTextureW(name, position, alpha); }
 
         //RefPosition、実装していない
         public void SetPosition(ref Vector2 other) { other = position; }
