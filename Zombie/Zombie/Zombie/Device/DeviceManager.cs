@@ -16,6 +16,7 @@ namespace Zombie.Device
         private Sound sound;
         private Select select;
         private Camera camera;
+        private Motion motion;
         private static Random rnd = new Random();
 
         public DeviceManager(ContentManager content,GraphicsDevice graphics) {
@@ -25,10 +26,12 @@ namespace Zombie.Device
             sound = new Sound(content);
             select = new Select();
             camera = new Camera();
+            motion = new Motion();
         }
 
         public void Update(GameTime gameTime) { }
 
+        public Motion GetMotion() { return motion; }
         public Renderer GetRenderer() { return renderer; }
         public InputState GetInputState() { return inputState; }
         public Sound GetSound() { return sound; }

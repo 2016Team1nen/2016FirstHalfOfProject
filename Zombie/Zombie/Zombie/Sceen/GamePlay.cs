@@ -22,21 +22,24 @@ namespace Zombie.Sceen
         private List<Beam> beamR;
         private List<Beam> beamL;
 
+        private DeviceManager device;
         private IsCollision isCollision;
         private Sound sound;
         private Camera camera;
         private bool isEnd;
+        private IsSceen next;
 
         public GamePlay(DeviceManager deviceManager) {
             isCollision = deviceManager.GetIsCollision();
             sound = deviceManager.GetSound();
             camera = deviceManager.GetCamera();
+            device = deviceManager;
         }
 
         public void Initialize() {
             isEnd = false;
-
-            player = new Player("player", 3, new Vector2(500, Screen.screenHeight - 64 -250), new Vector2(211, 250), Vector2.Zero);
+            next = IsSceen.ENDING;
+            player = new Player("player", 3, new Vector2(500, Screen.screenHeight - 64 - 250), new Vector2(211, 250), Vector2.Zero, device);
             enemy = new List<Character>(){
                 new EnemyA("enemyA", 1, new Vector2(2200, Screen.screenHeight - 64 * 2-250), new Vector2(140, 250), new Vector2(-5, 0)),
                 new EnemyB("enemyB", 1, new Vector2(4000, Screen.screenHeight - 64 * 2-250), new Vector2(140, 250),  Vector2.Zero)
@@ -60,11 +63,11 @@ namespace Zombie.Sceen
             camera.Update(player.Position);
 
             //NextSceen判定
-            if (player.Position.X >= 9000 - 1050 || player.Hp <= 0) { isEnd = true; sound.StopBGM(); }
-
-            string s;
+            if (player.Position.X >= 9000 - 1050) { 
+                next = IsSceen.CLEAR; 
+                isEnd = true; sound.StopBGM(); }
+            if (player.Hp <= 0) {  isEnd = true; sound.StopBGM(); }
             
-
             //beamの移動
             foreach (var b in beamR) { b.Update(gameTime); }
             foreach (var b in beamL) { b.Update(gameTime); }
@@ -198,8 +201,7 @@ namespace Zombie.Sceen
                         break;
                     }
                 }
-                foreach (var bR in beamR)
-                {
+                foreach (var bR in beamR) {
                     if (bR.GetBeamType()) { continue; }
                     bool isBeamR = isCollision.Update(bR.Position, m.Position, bR.Size, m.Size);
                     if (isBeamR)
@@ -251,9 +253,7 @@ namespace Zombie.Sceen
             return isEnd;
         }
         public IsSceen Next() {
-            Initialize();
-            if (player.Hp<=0){return IsSceen.ENDING;}
-            else{return IsSceen.CLEAR;}
+            return next;
         }
 
     }

@@ -12,22 +12,23 @@ namespace Zombie
 {
     class Player : Character
     {
+        private DeviceManager device;
         private InputState input;
         private Motion motion;
+        private Sound sound;
         
         private int rl;
         private bool beamType;
         private List<Beam> beamR;
         private List<Beam> beamL;
 
-        public enum Direction { RIGHT, LEFT, JUMP, STOP }
+        public enum Direction { RIGHT, LEFT, JUMP, STOP,SHOOT }
 
         private Direction direction;
 
-
-        public Player(string name, int hp, Vector2 position, Vector2 size, Vector2 velocity)
+        public Player(string name, int hp, Vector2 position, Vector2 size, Vector2 velocity, DeviceManager device)
             : base(name, hp, position, size, velocity) {
-                input = new InputState();
+                this.device = device;
                 beamL = new List<Beam>();
                 beamR = new List<Beam>();
                 rl = 1;
@@ -37,22 +38,21 @@ namespace Zombie
 
 
         public void Initialize() {
-            motion = new Motion();
+            motion = device.GetMotion();
+            input = device.GetInputState() ;
+            sound = device.GetSound() ;
 
             //RUN
             for (int i = 0; i < 6; i++) {
                 motion.Add(i, new Rectangle(211 * (i % 3), 250 * (int)(i / 3), 211, 250));
             }
 
-            //JUMP
-            motion.Add(6, new Rectangle(211 * 0, 250 * 2, 211, 250));
-            motion.Add(7, new Rectangle(211 * 1, 250 * 2, 211, 250));
-            
-            //STOP
-            motion.Add(8, new Rectangle(211 * 0, 250 * 3, 211, 250));
-            motion.Add(9, new Rectangle(211 * 1, 250 * 3, 211, 250));
+            //JUMP:6,7  STOP:8,9    SHOOT:10~13(L,R)
+            for (int i = 6; i < 14; i++) {
+                motion.Add(i, new Rectangle(211 * (i % 2), 250 * (int)(2+(i-6) / 2), 211, 250));
+            }
 
-            motion.Initialize(new Range(0, 9), new Timer(0.2f));
+            motion.Initialize(new Range(0, 13), new Timer(0.2f));
 
             //最初は右向き
             direction = Direction.RIGHT;
@@ -82,7 +82,6 @@ namespace Zombie
                 else { motion.Initialize(new Range(9, 9), timer); }
             }
 
-
             else if ( (velocity.X < 0.0f) && direction != Direction.LEFT) {
                 direction = Direction.LEFT;
                 motion.Initialize(new Range(0, 2), timer);
@@ -95,13 +94,19 @@ namespace Zombie
         }
 
 
-        private void Shoot() { 
+        private void Shoot() {
             if (input.IsKeyDown(Keys.Space)) {
+                Timer timer = new Timer(1.0f);
                 if (rl > 0) {
                     beamR.Add(new Beam("beam", 1, (position + new Vector2(size.X,50)), new Vector2(32, 32), Vector2.Zero, beamType, rl));
+                    if (beamType && velocity.X == 0) { motion.Initialize(new Range(13, 13), timer); }
+                    if (!beamType && velocity.X == 0) { motion.Initialize(new Range(12, 12), timer); }
                 }
-                else {
+                else if (rl < 0){
                     beamL.Add(new Beam("beam", 1, (position + new Vector2(-16, 50)), new Vector2(32, 32), Vector2.Zero, beamType, rl));
+                    sound.PlaySE("gameplayse");
+                    if (beamType && velocity.X == 0) { motion.Initialize(new Range(10, 10), timer); }
+                    if (!beamType && velocity.X == 0) { motion.Initialize(new Range(11, 11), timer); }
                 }
             }
             beamR.RemoveAll(b => b.GetStart() < (b.Position.X - 500));

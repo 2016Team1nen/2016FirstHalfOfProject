@@ -128,7 +128,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\player.xnb</Output>
-      <Time>2016-07-26T00:15:08.9485485+09:00</Time>
+      <Time>2016-07-28T00:02:19.550964+09:00</Time>
     </Item>
     <Item>
       <Source>gamestart.png</Source>
@@ -137,16 +137,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\gamestart.xnb</Output>
-      <Time>2016-07-25T23:47:56.8382786+09:00</Time>
-    </Item>
-    <Item>
-      <Source>stuffrole.png</Source>
-      <Name>stuffrole</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\stuffrole.xnb</Output>
-      <Time>2016-07-25T23:47:24.6931645+09:00</Time>
+      <Time>2016-07-27T14:15:56.2389447+09:00</Time>
     </Item>
     <Item>
       <Source>enemyA.png</Source>
@@ -201,6 +192,15 @@
       <Options>None</Options>
       <Output>D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\monsterB.xnb</Output>
       <Time>2016-07-26T22:57:26.252584+09:00</Time>
+    </Item>
+    <Item>
+      <Source>staffcredits.png</Source>
+      <Name>staffcredits</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\staffcredits.xnb</Output>
+      <Time>2016-07-27T14:15:42.1536115+09:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

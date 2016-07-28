@@ -36,33 +36,33 @@ namespace Zombie
             isblock = isBlock;
 
             //左から行く(○)
-            if (isBlock && position.X <= (blockPosition.X - 59) &&
-                position.Y < (blockPosition + bSize).Y &&
-                position.Y > (blockPosition - size).Y) {
-                velocity.Y = 0.5f;
+            if (isBlock && position.X <= (blockPosition.X - size.X + 5) &&
+                position.Y < ((blockPosition + bSize).Y) &&
+                position.Y > ((blockPosition - size).Y + 3) ) {
+                velocity.Y = 1.0f;
                 position.X = (blockPosition - size).X;
             }
 
             //右から行く(○)
             if (isBlock && (position.X + 5) >= (blockPosition + bSize).X && 
-                position.Y < (blockPosition + bSize).Y&&
-                position.Y > (blockPosition - size).Y + 1) {
-                velocity.Y = 0.5f;
+                position.Y < ((blockPosition + bSize).Y)&&
+                position.Y > (blockPosition - size).Y + 3) {
+                velocity.Y = 1.0f;
                 position.X = (blockPosition + bSize).X;
             }
 
             //上から落ちる(○)
             if (isBlock && position.X > (blockPosition - size).X &&
                 position.X < (blockPosition + bSize).X &&
-                position.Y < blockPosition.Y) {
+                (position + size).Y -30  < blockPosition.Y) {
                 velocity.Y = 0;
                 position.Y = blockPosition.Y - size.Y;
             }
 
             //下から行く(○)
-            if (isBlock && position.X > (blockPosition - size).X &&
-                position.X < (blockPosition + bSize).X &&
-                position.Y > blockPosition.Y){
+            if (isBlock && position.X >= (blockPosition - size).X -5 &&
+                position.X <= (blockPosition + bSize).X+ 5 &&
+                position.Y >= blockPosition.Y){
                 velocity.Y *= -1; }
         }
 

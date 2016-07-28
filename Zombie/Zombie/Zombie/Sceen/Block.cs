@@ -31,8 +31,8 @@ namespace Zombie
         public Vector2 GetSize() { return size; }
 
         public List<Block> Screen1() {
-            Vector2 p = new Vector2(32 * 25, Screen.screenHeight - 32 * 11);
-            while (p.X < Screen.screenWidth - 32 * 2) {
+            Vector2 p = new Vector2(1000, Screen.screenHeight - 32 * 15);
+            while (p.X < 2000 - 3) {
                 block.Add(new Block("block", p, new Vector2(32, 32)));
                 p.X += 32;
             }
