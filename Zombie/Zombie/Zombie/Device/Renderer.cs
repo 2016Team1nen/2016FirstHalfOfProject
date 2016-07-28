@@ -5,6 +5,7 @@ using System.Text;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework;
+using Zombie.Device;
 
 namespace Zombie
 {
@@ -23,6 +24,7 @@ namespace Zombie
         }
 
         public void LoadTexture(string name, string filepath = "./") {
+            
             textures.Add(name, contentManager.Load<Texture2D>(filepath + name));
         }
 
@@ -31,26 +33,23 @@ namespace Zombie
         public void End() { spriteBatch.End(); }
 
         // 通用
-        public void DrawTextureW(string name, Vector2 position, float alpha = 1.0f) {
+        public void DrawTextureW(string name, Vector2 position, float alpha = 1.0f){
             spriteBatch.Draw(textures[name], position, Color.White * alpha);
         }
-        public void DrawTextureG(string name, Vector2 position, float alpha = 1.0f)
-        {
-            spriteBatch.Draw(textures[name], position, Color.Green * alpha);
+        public void DrawTextureG(string name, Vector2 position, float alpha = 1.0f) {
+            spriteBatch.Draw(textures[name], position, Color.Blue * alpha);
         }
 
-        //player
-        public void Draw(string name, Vector2 position, int rf, float alpha = 1.0f) {
-            if (rf == -1) {
-                spriteBatch.Draw(textures[name], position,
-                    new Rectangle(64,0,64,64),
-                    Color.White * alpha);
-            }
-            else {
-                spriteBatch.Draw(textures[name], position,
-                    new Rectangle(0, 0, 64, 64),
-                    Color.White * alpha);
-            }
+        //Camera
+        internal void DrawCamera(Camera camera) {
+            spriteBatch.Begin(
+                SpriteSortMode.Deferred, BlendState.AlphaBlend,
+                null, null, null, null, camera.ViewMatrix);
+        }
+
+        //Character
+        public void DrawTexture(string name, Vector2 positiion, Rectangle rect, float alpha) {
+            spriteBatch.Draw(textures[name], positiion, rect, Color.White * alpha);
         }
 
         //弾
@@ -69,8 +68,8 @@ namespace Zombie
 
         //life
         public void DrawNumber(Character chara, int life, float alpha = 1.0f) {
-            Vector2 p = chara.GetPosition() + new Vector2(0, -10);
-            for (int i = 0; i < chara.GetHp(); i++) {
+            Vector2 p = chara.Position + new Vector2(0, -10);
+            for (int i = 0; i < chara.Hp; i++) {
                 spriteBatch.Draw(textures["life"], p, Color.White * alpha);
                 p.X += 20;
             }

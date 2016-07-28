@@ -2,24 +2,6 @@
 <XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
   <Asset Type="Pipeline:BuildItemCollection">
     <Item>
-      <Source>player.BMP</Source>
-      <Name>player</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\player.xnb</Output>
-      <Time>2016-07-14T17:23:48.8241598+09:00</Time>
-    </Item>
-    <Item>
-      <Source>enemy.png</Source>
-      <Name>enemy</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\enemy.xnb</Output>
-      <Time>2016-06-28T13:03:26+09:00</Time>
-    </Item>
-    <Item>
       <Source>life.png</Source>
       <Name>life</Name>
       <Importer>TextureImporter</Importer>
@@ -29,15 +11,6 @@
       <Time>2015-06-25T05:43:54+09:00</Time>
     </Item>
     <Item>
-      <Source>block.jpg</Source>
-      <Name>block</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\block.xnb</Output>
-      <Time>2016-07-04T19:13:46.4555234+09:00</Time>
-    </Item>
-    <Item>
       <Source>beam.BMP</Source>
       <Name>beam</Name>
       <Importer>TextureImporter</Importer>
@@ -45,15 +18,6 @@
       <Options>None</Options>
       <Output>D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\beam.xnb</Output>
       <Time>2016-07-14T17:23:48.7806987+09:00</Time>
-    </Item>
-    <Item>
-      <Source>title.bmp</Source>
-      <Name>title</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\title.xnb</Output>
-      <Time>2016-07-14T18:18:14.033383+09:00</Time>
     </Item>
     <Item>
       <Source>ending.bmp</Source>
@@ -92,16 +56,6 @@
       <Options>None</Options>
       <Output>D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\titlebgm.xnb</Output>
       <Extra>D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\titlebgm.wma</Extra>
-      <Time>2008-10-06T14:42:36+09:00</Time>
-    </Item>
-    <Item>
-      <Source>ZombieBGM.mp3</Source>
-      <Name>ZombieBGM</Name>
-      <Importer>Mp3Importer</Importer>
-      <Processor>SongProcessor</Processor>
-      <Options>None</Options>
-      <Output>D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\ZombieBGM.xnb</Output>
-      <Extra>D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\ZombieBGM.wma</Extra>
       <Time>2016-07-20T11:51:46.5281506+09:00</Time>
     </Item>
     <Item>
@@ -132,22 +86,121 @@
       <Time>2010-09-10T17:56:00+09:00</Time>
     </Item>
     <Item>
-      <Source>gamestart.bmp</Source>
+      <Source>sky.png</Source>
+      <Name>sky</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\sky.xnb</Output>
+      <Time>2016-07-25T17:03:17.6432453+09:00</Time>
+    </Item>
+    <Item>
+      <Source>block.png</Source>
+      <Name>block</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\block.xnb</Output>
+      <Time>2016-07-25T16:50:14+09:00</Time>
+    </Item>
+    <Item>
+      <Source>title.jpg</Source>
+      <Name>title</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\title.xnb</Output>
+      <Time>2016-07-25T17:20:58+09:00</Time>
+    </Item>
+    <Item>
+      <Source>goal.png</Source>
+      <Name>goal</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\goal.xnb</Output>
+      <Time>2016-07-26T18:36:29.4019453+09:00</Time>
+    </Item>
+    <Item>
+      <Source>player.png</Source>
+      <Name>player</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\player.xnb</Output>
+      <Time>2016-07-28T00:02:19.550964+09:00</Time>
+    </Item>
+    <Item>
+      <Source>gamestart.png</Source>
       <Name>gamestart</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\gamestart.xnb</Output>
-      <Time>2016-07-21T10:10:36.5004463+09:00</Time>
+      <Time>2016-07-27T14:15:56.2389447+09:00</Time>
     </Item>
     <Item>
-      <Source>stuffrole.bmp</Source>
-      <Name>stuffrole</Name>
+      <Source>enemyA.png</Source>
+      <Name>enemyA</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\stuffrole.xnb</Output>
-      <Time>2016-07-21T10:11:38.6566957+09:00</Time>
+      <Output>D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\enemyA.xnb</Output>
+      <Time>2016-07-26T20:11:45.9328283+09:00</Time>
+    </Item>
+    <Item>
+      <Source>enemyB.png</Source>
+      <Name>enemyB</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\enemyB.xnb</Output>
+      <Time>2016-07-26T20:11:44.1243168+09:00</Time>
+    </Item>
+    <Item>
+      <Source>start.png</Source>
+      <Name>start</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\start.xnb</Output>
+      <Time>2016-07-26T18:37:13.8775555+09:00</Time>
+    </Item>
+    <Item>
+      <Source>gameclear.jpg</Source>
+      <Name>gameclear</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\gameclear.xnb</Output>
+      <Time>2016-07-26T18:51:04+09:00</Time>
+    </Item>
+    <Item>
+      <Source>monsterA.png</Source>
+      <Name>monsterA</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\monsterA.xnb</Output>
+      <Time>2016-07-26T22:42:13.0247801+09:00</Time>
+    </Item>
+    <Item>
+      <Source>monsterB.png</Source>
+      <Name>monsterB</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\monsterB.xnb</Output>
+      <Time>2016-07-26T22:57:26.252584+09:00</Time>
+    </Item>
+    <Item>
+      <Source>staffcredits.png</Source>
+      <Name>staffcredits</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\staffcredits.xnb</Output>
+      <Time>2016-07-27T14:15:42.1536115+09:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

@@ -17,11 +17,13 @@ namespace Zombie.Sceen
         public Ending(DeviceManager deviceManager) {
             input = deviceManager.GetInputState();
             sound = deviceManager.GetSound();
+            Initialize();
         }
 
         public void Initialize() {
             isEnd = false;
         }
+
         public void Update(GameTime gameTime) {
             sound.PlayeBGM("endingbgm");
             input.UpdateKey(Keyboard.GetState());

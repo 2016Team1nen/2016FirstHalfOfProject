@@ -11,6 +11,7 @@ namespace Zombie
     {
         //protected string name;
         protected int hp;
+<<<<<<< HEAD
         //protected Vector2 position;
         //protected Vector2 velocity;
         //protected Vector2 size;
@@ -19,6 +20,23 @@ namespace Zombie
             :base(name,position,velocity, size)
         {
             this.hp = hp;
+=======
+        protected Vector2 position;
+        protected Vector2 velocity;
+        protected Vector2 size;
+        protected float alpha;
+
+        protected bool isblock;
+
+        public Character(string name, int hp, Vector2 position, Vector2 size, Vector2 velocity) {
+            this.name = name;
+            this.hp = hp;
+            this.position = position;
+            this.velocity = velocity;
+            this.size = size;
+            isblock = false;
+            alpha = 1.0f;
+>>>>>>> origin/you
         }
 
         //public abstract void Update(GameTime gameTime);
@@ -26,34 +44,36 @@ namespace Zombie
 
         public void IsBlock(Vector2 blockPosition, Vector2 bSize, bool isBlock)
         {
+            isblock = isBlock;
+
             //左から行く(○)
-            if (isBlock && position.X <= (blockPosition.X - 59) &&
-                position.Y < (blockPosition + bSize).Y &&
-                position.Y > (blockPosition - size).Y) {
-                velocity.Y = 0.5f;
+            if (isBlock && position.X <= (blockPosition.X - size.X + 5) &&
+                position.Y < ((blockPosition + bSize).Y) &&
+                position.Y > ((blockPosition - size).Y + 3) ) {
+                velocity.Y = 1.0f;
                 position.X = (blockPosition - size).X;
             }
 
             //右から行く(○)
             if (isBlock && (position.X + 5) >= (blockPosition + bSize).X && 
-                position.Y < (blockPosition + bSize).Y&&
-                position.Y > (blockPosition - size).Y + 1) {
-                velocity.Y = 0.5f;
+                position.Y < ((blockPosition + bSize).Y)&&
+                position.Y > (blockPosition - size).Y + 3) {
+                velocity.Y = 1.0f;
                 position.X = (blockPosition + bSize).X;
             }
 
             //上から落ちる(○)
             if (isBlock && position.X > (blockPosition - size).X &&
                 position.X < (blockPosition + bSize).X &&
-                position.Y < blockPosition.Y) {
+                (position + size).Y -30  < blockPosition.Y) {
                 velocity.Y = 0;
                 position.Y = blockPosition.Y - size.Y;
             }
 
             //下から行く(○)
-            if (isBlock && position.X > (blockPosition - size).X &&
-                position.X < (blockPosition + bSize).X &&
-                position.Y > blockPosition.Y){
+            if (isBlock && position.X >= (blockPosition - size).X -5 &&
+                position.X <= (blockPosition + bSize).X+ 5 &&
+                position.Y >= blockPosition.Y){
                 velocity.Y *= -1; }
         }
 
@@ -62,16 +82,18 @@ namespace Zombie
             else { position.X -= 150; }
         }
 
-
         //死亡判断
-        public bool IsDeath() { return !(hp > 0); }
-
+        public void IsDeath() { 
+            if (hp > 0) { return;}
+            velocity = Vector2.Zero;
+            alpha -= 0.005f;
+        }
 
         ////////////////////////////////////////////
-        
 
-        //Get
+        //Get,Set
         public string GetName() { return name; }
+<<<<<<< HEAD
         //public Vector2 GetPosition() { return position; }
         //public Vector2 GetSize() { return size; }
         public int GetHp() { return hp; }
@@ -85,15 +107,29 @@ namespace Zombie
         public void ChangeHp(int hp) { this.hp = hp; }
         //public void ChangePosition(Vector2 position) { this.position = position; }
         //public void ChangeVelocity(Vector2 velocity) { this.velocity = velocity; }
+=======
 
+        public int Hp { 
+            get { return hp; }
+            set { hp = value; }
+        }
+>>>>>>> origin/you
+
+        public Vector2 Position { 
+            get { return position; }
+            set { position = value; }
+        }
+        public Vector2 Velocity { get { return velocity; } }
+        public Vector2 Size { get { return size; } }
+        public float Alpha { 
+            get { return alpha; }
+            set { alpha = value; }
+        }
 
         ////////////////////////////////////////////
 
-
         //Draw
-        public void Draw(Renderer renderer) { renderer.DrawTextureW(name, position); }
-        public void Draw(Renderer renderer, int rf) { renderer.Draw(name, position, rf); }
-
+        public virtual void Draw(Renderer renderer) { renderer.DrawTextureW(name, position, alpha); }
 
         //RefPosition、実装していない
         public void SetPosition(ref Vector2 other) { other = position; }

@@ -14,12 +14,12 @@ namespace Zombie.Device
         public Select() { select = 0; input = new InputState(); }
 
         public void SelectT() {
-            if (input.IsDown()) {
+            if (input.IsDown(Keys.Down)) {
                 select++;
                 if (select > 1) { select = 1; }
             }
 
-            if (input.IsUp()) {
+            if (input.IsDown(Keys.Up)){
                 select--;
                 if (select < 0) { select = 0; }
             }

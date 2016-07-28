@@ -13,18 +13,14 @@ namespace Zombie
         private string name;
         private List<Block> block;
 
-
-        public Block(string name, Vector2 position, Vector2 size)
-        {
+        public Block(string name, Vector2 position, Vector2 size) {
             this.name = name;
             this.position = position;
             this.size = size;
             block = new List<Block>();
         }
 
-
-        public void Draw(Renderer renderer)
-        {
+        public void Draw(Renderer renderer) {
             renderer.DrawTextureW(name, position);
         }
 
@@ -32,27 +28,25 @@ namespace Zombie
             return position;
         }
 
-        public Vector2 GetSize()
-        {
-            return size;
-        }
+        public Vector2 GetSize() { return size; }
 
         public List<Block> Screen1() {
-            Vector2 p = new Vector2(192 * 3, Screen.screenHeight - 64 * 5);
-            block.Add(new Block("block", p, new Vector2(192, 64)));
-
-            p = new Vector2(192 * 2, Screen.screenHeight - 64 * 2);
-            while (p.X < Screen.screenWidth - 192*2)
-            {
-                block.Add(new Block("block", p, new Vector2(192, 64)));
-                p.X += 192;
+            Vector2 p = new Vector2(1000, Screen.screenHeight - 32 * 15);
+            while (p.X < 2000 - 3) {
+                block.Add(new Block("block", p, new Vector2(32, 32)));
+                p.X += 32;
             }
 
-            p = new Vector2(0, Screen.screenHeight - 64);
-            while (p.X < Screen.screenWidth)
-            {
-                block.Add(new Block("block", p, new Vector2(192, 64)));
-                p.X += 192;
+            p = new Vector2(32 * 10, Screen.screenHeight - 32 * 2);
+            while (p.X < 1500) {
+                block.Add(new Block("block", p, new Vector2(32, 32)));
+                p.X += 32;
+            }
+
+            p = new Vector2(0, Screen.screenHeight - 32);
+            while (p.X < 9000) {
+                block.Add(new Block("block", p, new Vector2(32, 32)));
+                p.X += 32;
             }
 
             return block;

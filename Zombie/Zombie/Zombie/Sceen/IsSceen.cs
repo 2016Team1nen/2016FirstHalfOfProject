@@ -9,6 +9,7 @@ namespace Zombie.Sceen
     {
         TITLE,
         GAMEPLAY,
+        CLEAR,
         ENDING
     }
 }

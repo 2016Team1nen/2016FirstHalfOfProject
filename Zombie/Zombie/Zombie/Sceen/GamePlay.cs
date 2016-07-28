@@ -14,6 +14,7 @@ namespace Zombie.Sceen
     {
         private Character player;
         private List<Character> enemy;
+        private List<Character> monster;
 
         private Block block;
         private List<Block> blockG;
@@ -21,39 +22,55 @@ namespace Zombie.Sceen
         private List<Beam> beamR;
         private List<Beam> beamL;
 
+        private DeviceManager device;
         private IsCollision isCollision;
         private Sound sound;
+        private Camera camera;
         private bool isEnd;
+        private IsSceen next;
 
         public GamePlay(DeviceManager deviceManager) {
             isCollision = deviceManager.GetIsCollision();
             sound = deviceManager.GetSound();
+            camera = deviceManager.GetCamera();
+            device = deviceManager;
         }
 
         public void Initialize() {
             isEnd = false;
-
-            player = new Player("player", 3, new Vector2(0, Screen.screenHeight - 64 * 2), new Vector2(64, 64), Vector2.Zero);
+            next = IsSceen.ENDING;
+            player = new Player("player", 3, new Vector2(500, Screen.screenHeight - 64 - 250), new Vector2(211, 250), Vector2.Zero, device);
             enemy = new List<Character>(){
-                new EnemyA("enemy", 1, new Vector2(700, Screen.screenHeight - 64 * 3), new Vector2(64, 64), new Vector2(-5, 0))
+                new EnemyA("enemyA", 1, new Vector2(2200, Screen.screenHeight - 64 * 2-250), new Vector2(140, 250), new Vector2(-5, 0)),
+                new EnemyB("enemyB", 1, new Vector2(4000, Screen.screenHeight - 64 * 2-250), new Vector2(140, 250),  Vector2.Zero)
             };
+            monster = new List<Character>(){
+                new MonsterA("monsterA", 1, new Vector2(3200, Screen.screenHeight - 64 * 2-260), new Vector2(300, 260), Vector2.Zero),
+                new MonsterB("monsterB", 1, new Vector2(5000, Screen.screenHeight - 64 * 2-200), new Vector2(280, 200),  Vector2.Zero)
+            };
+
 
             beamR = new List<Beam>();
             beamL = new List<Beam>();
 
-            block = new Block("block", Vector2.Zero, new Vector2(192, 64));
+            block = new Block("block", Vector2.Zero, new Vector2(64, 64));
             blockG = block.Screen1();
 
         }
-        public void Update(GameTime gameTime) {
+        public void Update(GameTime gameTime)
+        {
             sound.PlayeBGM("gameplaybgm");
+            camera.Update(player.Position);
 
-            //Ending判定
-            if (player.GetPosition().X >= Screen.screenWidth - 64) { isEnd = true; sound.StopBGM(); }
-
+            //NextSceen判定
+            if (player.Position.X >= 9000 - 1050) { 
+                next = IsSceen.CLEAR; 
+                isEnd = true; sound.StopBGM(); }
+            if (player.Hp <= 0) {  isEnd = true; sound.StopBGM(); }
+            
             //beamの移動
-            foreach (var b in beamR) { b.Update(gameTime);  }
-            foreach (var b in beamL) { b.Update(gameTime);  }
+            foreach (var b in beamR) { b.Update(gameTime); }
+            foreach (var b in beamL) { b.Update(gameTime); }
 
             //playerの動き
             player.Update(gameTime);
@@ -62,83 +79,159 @@ namespace Zombie.Sceen
             beamL = ((Player)player).GetBeamL();
             beamR = ((Player)player).GetBeamR();
 
-            //enemyの移動
-            foreach (var e in enemy) { ((EnemyA)e).Move(player.GetPosition()); }
+            //enemyの動き
+            foreach (var e in enemy)
+            {
+                if (e is EnemyA) { ((EnemyA)e).Move(player.Position); }
+                else { ((EnemyB)e).Move(player.Position); }
+                e.Update(gameTime);
+            }
+
+            //monsterの動き
+            foreach (var m in monster)
+            {
+                if (m is MonsterA) { ((MonsterA)m).Move(player.Position); }
+                else { ((MonsterB)m).Move(player.Position); }
+                m.Update(gameTime);
+            }
 
             //Blockとのあたり判定
             foreach (var b in blockG)
             {
                 //Playerとのあたり判定
-                bool playerIsBlock = isCollision.Update(player.GetPosition(), b.GetPosition(), player.GetSize(), b.GetSize());
+                bool playerIsBlock = isCollision.Update(player.Position, b.GetPosition(), player.Size, b.GetSize());
                 if (playerIsBlock) { player.IsBlock(b.GetPosition(), b.GetSize(), playerIsBlock); }
 
                 //Enemyとのあたり判定
-                foreach (var e in enemy) {
-                    bool enemyIsBlock = isCollision.Update(e.GetPosition(), b.GetPosition(), e.GetSize(), b.GetSize());
+                foreach (var e in enemy)
+                {
+                    bool enemyIsBlock = isCollision.Update(e.Position, b.GetPosition(), e.Size, b.GetSize());
                     if (enemyIsBlock) { e.IsBlock(b.GetPosition(), b.GetSize(), enemyIsBlock); }
                 }
-                
-                //弾とのあたり判定
-                foreach (var bR in beamR) {
-                    bool beamRIsBlock = isCollision.Update(bR.GetPosition(), b.GetPosition(), bR.GetSize(), b.GetSize());
-                    if (beamRIsBlock) { beamR.Remove(bR);   break; }
+
+                //Monsterとのあたり判定
+                foreach (var m in monster)
+                {
+                    bool monsterIsBlock = isCollision.Update(m.Position, b.GetPosition(), m.Size, b.GetSize());
+                    if (monsterIsBlock) { m.IsBlock(b.GetPosition(), b.GetSize(), monsterIsBlock); }
                 }
-                foreach (var bL in beamL) {
-                    bool beamLIsBlock = isCollision.Update(bL.GetPosition(), b.GetPosition(), bL.GetSize(), b.GetSize());
-                    if (beamLIsBlock) { beamL.Remove(bL);   break; }
+
+                //弾とのあたり判定
+                foreach (var bR in beamR)
+                {
+                    bool beamRIsBlock = isCollision.Update(bR.Position, b.GetPosition(), bR.Size, b.GetSize());
+                    if (beamRIsBlock) { beamR.Remove(bR); break; }
+                }
+                foreach (var bL in beamL)
+                {
+                    bool beamLIsBlock = isCollision.Update(bL.Position, b.GetPosition(), bL.Size, b.GetSize());
+                    if (beamLIsBlock) { beamL.Remove(bL); break; }
                 }
             }
 
             //windowとのあたり判定
-            player.ChangePosition(isCollision.Collision(player.GetPosition()));
+            player.Position = isCollision.Collision(player.Position);
 
             //敵のあたり判定
-            foreach (var e in enemy) {
+            foreach (var e in enemy)
+            {
+                if (e.Hp <= 0) { e.IsDeath(); continue; }
                 //敵とプレーヤーのあたり判定
-                bool isEnemy = isCollision.Update(player.GetPosition(), e.GetPosition(), player.GetSize(), e.GetSize());
-                if (isEnemy) {
+                bool isEnemy = isCollision.Update(player.Position, e.Position, player.Size, e.Size);
+                if (isEnemy)
+                {
                     sound.PlaySE("gameplayse");
-                    player.ChangeHp(player.GetHp() - 1);
-                    e.ChangeHp(e.GetHp() - 1);
-                    player.IsEnemy(e.GetPosition());
+                    player.Hp = player.Hp - 1;
+                    e.Hp = e.Hp - 1;
+                    player.IsEnemy(e.Position);
                 }
 
                 //敵と弾のあたり判定
-                foreach (var bL in beamL) {
-                    bool isBeamL = isCollision.Update(bL.GetPosition(), e.GetPosition(), bL.GetSize(), e.GetSize());
-                    if (isBeamL) {
+                foreach (var bL in beamL)
+                {
+                    if (!bL.GetBeamType()) { continue; }
+                    bool isBeamL = isCollision.Update(bL.Position, e.Position, bL.Size, e.Size);
+                    if (isBeamL)
+                    {
                         sound.PlaySE("gameplayse");
-                        e.ChangeHp(e.GetHp() - 1);
+                        e.Hp = e.Hp - 1;
                         beamL.Remove(bL);
                         break;
                     }
                 }
-                foreach (var bR in beamR) {
-                    bool isBeamR = isCollision.Update(bR.GetPosition(), e.GetPosition(), bR.GetSize(), e.GetSize());
-                    if (isBeamR) {
+                foreach (var bR in beamR)
+                {
+                    if (!bR.GetBeamType()) { continue; }
+                    bool isBeamR = isCollision.Update(bR.Position, e.Position, bR.Size, e.Size);
+                    if (isBeamR)
+                    {
                         sound.PlaySE("gameplayse");
-                        e.ChangeHp(e.GetHp() - 1);
+                        e.Hp = e.Hp - 1;
                         beamR.Remove(bR);
                         break;
                     }
                 }
             }
-            enemy.RemoveAll(e => e.IsDeath());
+            enemy.RemoveAll(e => e.Alpha <= 0);
 
 
+            //敵のあたり判定
+            foreach (var m in monster)
+            {
+                if (m.Hp <= 0) { m.IsDeath(); continue; }
+                //敵とプレーヤーのあたり判定
+                bool isEnemy = isCollision.Update(player.Position, m.Position, player.Size, m.Size);
+                if (isEnemy){
+                    sound.PlaySE("gameplayse");
+                    player.Hp = player.Hp - 1;
+                    m.Hp = m.Hp - 1;
+                    player.IsEnemy(m.Position);
+                }
+
+                //敵と弾のあたり判定
+                foreach (var bL in beamL)
+                {
+                    if (bL.GetBeamType()) { continue; }
+                    bool isBeamL = isCollision.Update(bL.Position, m.Position, bL.Size, m.Size);
+                    if (isBeamL)
+                    {
+                        sound.PlaySE("gameplayse");
+                        m.Hp = m.Hp - 1;
+                        beamL.Remove(bL);
+                        break;
+                    }
+                }
+                foreach (var bR in beamR) {
+                    if (bR.GetBeamType()) { continue; }
+                    bool isBeamR = isCollision.Update(bR.Position, m.Position, bR.Size, m.Size);
+                    if (isBeamR)
+                    {
+                        sound.PlaySE("gameplayse");
+                        m.Hp = m.Hp - 1;
+                        beamR.Remove(bR);
+                        break;
+                    }
+                }
+            }
+            monster.RemoveAll(m => m.Alpha <= 0);
         }
 
-
         public void Draw(Renderer renderer) {
-            renderer.Begin();
+            renderer.DrawCamera(camera);
 
-            //playerの向きをチェック
-            int rf;
-            rf = ((Player)player).GetRL();
-            player.Draw(renderer, rf);
+            renderer.DrawTextureW("sky", Vector2.Zero);
+            renderer.DrawTextureW("sky", new Vector2(3000, 0));
+            renderer.DrawTextureW("sky", new Vector2(6000, 0));
+            renderer.DrawTextureW("start", new Vector2(400, 330));
+            renderer.DrawTextureW("goal", new Vector2(5320, 0));
+
 
             //敵の表示
             foreach (var e in enemy) { e.Draw(renderer); }
+            foreach (var m in monster) { m.Draw(renderer); }
+
+            //playerの表示
+            player.Draw(renderer);
 
             //ステージの表示
             foreach (var b in blockG) { b.Draw(renderer); }
@@ -148,8 +241,8 @@ namespace Zombie.Sceen
             foreach (var b in beamR) { b.Draw(renderer, ((Beam)b).GetBeamType()); }
 
             //HPの表示
-            foreach (var e in enemy) { renderer.DrawNumber(e, e.GetHp()); }
-            renderer.DrawNumber(player, player.GetHp());
+            foreach (var e in enemy) { renderer.DrawNumber(e, e.Hp); }
+            renderer.DrawNumber(player, player.Hp);
 
             renderer.End();
         }
@@ -160,8 +253,7 @@ namespace Zombie.Sceen
             return isEnd;
         }
         public IsSceen Next() {
-            Initialize();
-            return IsSceen.ENDING;
+            return next;
         }
 
     }

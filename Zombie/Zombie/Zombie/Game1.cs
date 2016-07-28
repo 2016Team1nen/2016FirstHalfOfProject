@@ -42,9 +42,10 @@ namespace Zombie
             sceenManager.Add(IsSceen.TITLE, new Title(deviceManager));
 
             ISceen gamePlay = new GamePlay(deviceManager);
+            
             sceenManager.Add(Sceen.IsSceen.GAMEPLAY, gamePlay);
+            sceenManager.Add(Sceen.IsSceen.CLEAR, new Clear(deviceManager));
             sceenManager.Add(Sceen.IsSceen.ENDING, new Ending(deviceManager));
-
             sceenManager.Change(Sceen.IsSceen.TITLE);
 
             base.Window.Title = "Zombie";
@@ -55,14 +56,21 @@ namespace Zombie
             // Create a new SpriteBatch, which can be used to draw textures.
 
             renderer.LoadTexture("player");
-            renderer.LoadTexture("enemy");
+            renderer.LoadTexture("enemyA");
+            renderer.LoadTexture("enemyB");
+            renderer.LoadTexture("monsterA");
+            renderer.LoadTexture("monsterB");
             renderer.LoadTexture("life");
             renderer.LoadTexture("block");
             renderer.LoadTexture("beam");
             renderer.LoadTexture("title");
             renderer.LoadTexture("ending");
             renderer.LoadTexture("gamestart");
-            renderer.LoadTexture("stuffrole");
+            renderer.LoadTexture("staffcredits");
+            renderer.LoadTexture("sky");
+            renderer.LoadTexture("goal");
+            renderer.LoadTexture("start");
+            renderer.LoadTexture("gameclear");
 
             sound.LoadBGM("titlebgm");
             sound.LoadBGM("gameplaybgm");
@@ -70,6 +78,10 @@ namespace Zombie
             sound.LoadSE("titlese");
             sound.LoadSE("gameplayse");
             sound.LoadSE("endingse");
+            //sound.LoadSE("HealLaserFX");
+            //sound.LoadSE("ShotgunFX");
+            //sound.LoadSE("SludgeDeath");
+            //sound.LoadSE("WolfDeath");
 
             // TODO: use this.Content to load your game content here
         }
