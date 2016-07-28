@@ -12,6 +12,7 @@ namespace Zombie
         protected Vector2 position;
         protected Vector2 velocity;
         protected Vector2 size;
+        protected float alpha;
 
         public Vector2 Position
         {
@@ -36,9 +37,13 @@ namespace Zombie
             this.position = position;
             this.velocity = velocity;
             this.size = size;
+            alpha = 1.0f;
         }
 
         public abstract void Update(GameTime gameTime);
+
+        //Draw
+        public virtual void Draw(Renderer renderer) { renderer.DrawTextureW(name, position, alpha); }
 
         // Get
         public Vector2 GetPosition() { return position; }

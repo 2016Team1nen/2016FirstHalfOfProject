@@ -2,24 +2,6 @@
 <XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
   <Asset Type="Pipeline:BuildItemCollection">
     <Item>
-      <Source>player.BMP</Source>
-      <Name>player</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>E:\NEEC\K016A1862\Denshi Enzan Club\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\player.xnb</Output>
-      <Time>2016-07-28T18:17:14.1815765+09:00</Time>
-    </Item>
-    <Item>
-      <Source>enemy.png</Source>
-      <Name>enemy</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>E:\NEEC\K016A1862\Denshi Enzan Club\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\enemy.xnb</Output>
-      <Time>2016-07-28T18:17:14.1790752+09:00</Time>
-    </Item>
-    <Item>
       <Source>life.png</Source>
       <Name>life</Name>
       <Importer>TextureImporter</Importer>
@@ -27,15 +9,6 @@
       <Options>None</Options>
       <Output>E:\NEEC\K016A1862\Denshi Enzan Club\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\life.xnb</Output>
       <Time>2016-07-14T19:34:24.2284428+09:00</Time>
-    </Item>
-    <Item>
-      <Source>block.jpg</Source>
-      <Name>block</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>E:\NEEC\K016A1862\Denshi Enzan Club\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\block.xnb</Output>
-      <Time>2016-07-28T18:17:14.1785748+09:00</Time>
     </Item>
     <Item>
       <Source>beam.BMP</Source>
@@ -47,15 +20,6 @@
       <Time>2016-07-14T19:34:24.226441+09:00</Time>
     </Item>
     <Item>
-      <Source>title.bmp</Source>
-      <Name>title</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>E:\NEEC\K016A1862\Denshi Enzan Club\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\title.xnb</Output>
-      <Time>2016-07-28T18:17:14.192586+09:00</Time>
-    </Item>
-    <Item>
       <Source>ending.bmp</Source>
       <Name>ending</Name>
       <Importer>TextureImporter</Importer>
@@ -65,22 +29,121 @@
       <Time>2016-07-21T17:14:44.7358758+09:00</Time>
     </Item>
     <Item>
-      <Source>gamestart.bmp</Source>
+      <Source>sky.png</Source>
+      <Name>sky</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\NEEC\K016A1862\Denshi Enzan Club\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\sky.xnb</Output>
+      <Time>2016-07-28T18:18:54.076671+09:00</Time>
+    </Item>
+    <Item>
+      <Source>block.png</Source>
+      <Name>block</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\NEEC\K016A1862\Denshi Enzan Club\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\block.xnb</Output>
+      <Time>2016-07-28T18:18:54.0586578+09:00</Time>
+    </Item>
+    <Item>
+      <Source>title.jpg</Source>
+      <Name>title</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\NEEC\K016A1862\Denshi Enzan Club\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\title.xnb</Output>
+      <Time>2016-07-28T18:18:54.0816745+09:00</Time>
+    </Item>
+    <Item>
+      <Source>gamestart.png</Source>
       <Name>gamestart</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>E:\NEEC\K016A1862\Denshi Enzan Club\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\gamestart.xnb</Output>
-      <Time>2016-07-28T18:17:14.1800904+09:00</Time>
+      <Time>2016-07-28T18:18:54.0636614+09:00</Time>
     </Item>
     <Item>
-      <Source>stuffrole.bmp</Source>
-      <Name>stuffrole</Name>
+      <Source>player.png</Source>
+      <Name>player</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>E:\NEEC\K016A1862\Denshi Enzan Club\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\stuffrole.xnb</Output>
-      <Time>2016-07-28T18:17:14.1820773+09:00</Time>
+      <Output>E:\NEEC\K016A1862\Denshi Enzan Club\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\player.xnb</Output>
+      <Time>2016-07-28T18:18:54.0761702+09:00</Time>
+    </Item>
+    <Item>
+      <Source>enemyA.png</Source>
+      <Name>enemyA</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\NEEC\K016A1862\Denshi Enzan Club\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\enemyA.xnb</Output>
+      <Time>2016-07-28T18:18:54.0596585+09:00</Time>
+    </Item>
+    <Item>
+      <Source>enemyB.png</Source>
+      <Name>enemyB</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\NEEC\K016A1862\Denshi Enzan Club\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\enemyB.xnb</Output>
+      <Time>2016-07-28T18:18:54.0611596+09:00</Time>
+    </Item>
+    <Item>
+      <Source>goal.png</Source>
+      <Name>goal</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\NEEC\K016A1862\Denshi Enzan Club\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\goal.xnb</Output>
+      <Time>2016-07-28T18:18:54.0686649+09:00</Time>
+    </Item>
+    <Item>
+      <Source>start.png</Source>
+      <Name>start</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\NEEC\K016A1862\Denshi Enzan Club\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\start.xnb</Output>
+      <Time>2016-07-28T18:18:54.0776713+09:00</Time>
+    </Item>
+    <Item>
+      <Source>gameclear.jpg</Source>
+      <Name>gameclear</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\NEEC\K016A1862\Denshi Enzan Club\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\gameclear.xnb</Output>
+      <Time>2016-07-28T18:18:54.0626606+09:00</Time>
+    </Item>
+    <Item>
+      <Source>monsterA.png</Source>
+      <Name>monsterA</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\NEEC\K016A1862\Denshi Enzan Club\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\monsterA.xnb</Output>
+      <Time>2016-07-28T18:18:54.0706672+09:00</Time>
+    </Item>
+    <Item>
+      <Source>monsterB.png</Source>
+      <Name>monsterB</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\NEEC\K016A1862\Denshi Enzan Club\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\monsterB.xnb</Output>
+      <Time>2016-07-28T18:18:54.0726682+09:00</Time>
+    </Item>
+    <Item>
+      <Source>staffcredits.png</Source>
+      <Name>staffcredits</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>E:\NEEC\K016A1862\Denshi Enzan Club\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\staffcredits.xnb</Output>
+      <Time>2016-07-28T18:18:54.0776713+09:00</Time>
     </Item>
     <Item>
       <Source>endingbgm.mp3</Source>
@@ -110,17 +173,7 @@
       <Options>None</Options>
       <Output>E:\NEEC\K016A1862\Denshi Enzan Club\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\titlebgm.xnb</Output>
       <Extra>E:\NEEC\K016A1862\Denshi Enzan Club\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\titlebgm.wma</Extra>
-      <Time>2016-07-28T18:17:14.2331391+09:00</Time>
-    </Item>
-    <Item>
-      <Source>ZombieBGM.mp3</Source>
-      <Name>ZombieBGM</Name>
-      <Importer>Mp3Importer</Importer>
-      <Processor>SongProcessor</Processor>
-      <Options>None</Options>
-      <Output>E:\NEEC\K016A1862\Denshi Enzan Club\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\ZombieBGM.xnb</Output>
-      <Extra>E:\NEEC\K016A1862\Denshi Enzan Club\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\ZombieBGM.wma</Extra>
-      <Time>2016-07-28T18:17:14.1770733+09:00</Time>
+      <Time>2016-07-28T18:18:54.1086937+09:00</Time>
     </Item>
     <Item>
       <Source>endingse.wav</Source>

@@ -11,24 +11,10 @@ namespace Zombie
     {
         //protected string name;
         protected int hp;
-<<<<<<< HEAD
-        //protected Vector2 position;
-        //protected Vector2 velocity;
-        //protected Vector2 size;
-        
-        public Character(string name, int hp, Vector2 position, Vector2 size, Vector2 velocity)
-            :base(name,position,velocity, size)
-        {
-            this.hp = hp;
-=======
-        protected Vector2 position;
-        protected Vector2 velocity;
-        protected Vector2 size;
-        protected float alpha;
 
         protected bool isblock;
 
-        public Character(string name, int hp, Vector2 position, Vector2 size, Vector2 velocity) {
+        public Character(string name, int hp, Vector2 position, Vector2 size, Vector2 velocity):base(name, position, velocity, size) {
             this.name = name;
             this.hp = hp;
             this.position = position;
@@ -36,7 +22,6 @@ namespace Zombie
             this.size = size;
             isblock = false;
             alpha = 1.0f;
->>>>>>> origin/you
         }
 
         //public abstract void Update(GameTime gameTime);
@@ -93,34 +78,13 @@ namespace Zombie
 
         //Get,Set
         public string GetName() { return name; }
-<<<<<<< HEAD
-        //public Vector2 GetPosition() { return position; }
-        //public Vector2 GetSize() { return size; }
-        public int GetHp() { return hp; }
-        //public Vector2 GetVelocity() { return velocity; }
 
-        
-        //////////////////////////////////////////////////////
-        
-
-        //Change
-        public void ChangeHp(int hp) { this.hp = hp; }
-        //public void ChangePosition(Vector2 position) { this.position = position; }
-        //public void ChangeVelocity(Vector2 velocity) { this.velocity = velocity; }
-=======
 
         public int Hp { 
             get { return hp; }
             set { hp = value; }
         }
->>>>>>> origin/you
 
-        public Vector2 Position { 
-            get { return position; }
-            set { position = value; }
-        }
-        public Vector2 Velocity { get { return velocity; } }
-        public Vector2 Size { get { return size; } }
         public float Alpha { 
             get { return alpha; }
             set { alpha = value; }
@@ -128,8 +92,8 @@ namespace Zombie
 
         ////////////////////////////////////////////
 
-        //Draw
-        public virtual void Draw(Renderer renderer) { renderer.DrawTextureW(name, position, alpha); }
+        ////Draw
+        //public virtual void Draw(Renderer renderer) { renderer.DrawTextureW(name, position, alpha); }
 
         //RefPosition、実装していない
         public void SetPosition(ref Vector2 other) { other = position; }

@@ -1,8 +1,19 @@
 Content\life.xnb
 Content\beam.xnb
 Content\ending.xnb
+Content\sky.xnb
+Content\block.xnb
+Content\title.xnb
 Content\gamestart.xnb
-Content\stuffrole.xnb
+Content\player.xnb
+Content\enemyA.xnb
+Content\enemyB.xnb
+Content\goal.xnb
+Content\start.xnb
+Content\gameclear.xnb
+Content\monsterA.xnb
+Content\monsterB.xnb
+Content\staffcredits.xnb
 Content\endingbgm.xnb
 Content\endingbgm.wma
 Content\gameplaybgm.xnb
@@ -12,19 +23,3 @@ Content\titlebgm.wma
 Content\endingse.xnb
 Content\gameplayse.xnb
 Content\titlese.xnb
-<<<<<<< HEAD
-=======
-Content\sky.xnb
-Content\block.xnb
-Content\title.xnb
-Content\goal.xnb
-Content\player.xnb
-Content\gamestart.xnb
-Content\enemyA.xnb
-Content\enemyB.xnb
-Content\start.xnb
-Content\gameclear.xnb
-Content\monsterA.xnb
-Content\monsterB.xnb
-Content\staffcredits.xnb
->>>>>>> origin/you
