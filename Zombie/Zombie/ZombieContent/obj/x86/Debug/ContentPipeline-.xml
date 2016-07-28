@@ -202,6 +202,72 @@
       <Output>D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\staffcredits.xnb</Output>
       <Time>2016-07-27T14:15:42.1536115+09:00</Time>
     </Item>
+    <Item>
+      <Source>HealLaserFX.wav</Source>
+      <Name>HealLaserFX</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\HealLaserFX.xnb</Output>
+      <Time>2016-07-28T21:43:14.1624084+09:00</Time>
+    </Item>
+    <Item>
+      <Source>BattleTheme.mp3</Source>
+      <Name>BattleTheme</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\BattleTheme.xnb</Output>
+      <Extra>D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\BattleTheme.wma</Extra>
+      <Time>2016-07-28T21:43:15.1929774+09:00</Time>
+    </Item>
+    <Item>
+      <Source>ClearFanfare.mp3</Source>
+      <Name>ClearFanfare</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\ClearFanfare.xnb</Output>
+      <Extra>D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\ClearFanfare.wma</Extra>
+      <Time>2016-07-28T21:43:15.2082661+09:00</Time>
+    </Item>
+    <Item>
+      <Source>GameOverChords.mp3</Source>
+      <Name>GameOverChords</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\GameOverChords.xnb</Output>
+      <Extra>D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\GameOverChords.wma</Extra>
+      <Time>2016-07-28T21:43:15.2192754+09:00</Time>
+    </Item>
+    <Item>
+      <Source>ShotgunFX.wav</Source>
+      <Name>ShotgunFX</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\ShotgunFX.xnb</Output>
+      <Time>2016-07-28T21:43:14.1778252+09:00</Time>
+    </Item>
+    <Item>
+      <Source>SludgeDeath.wav</Source>
+      <Name>SludgeDeath</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\SludgeDeath.xnb</Output>
+      <Time>2016-07-28T21:43:14.1938443+09:00</Time>
+    </Item>
+    <Item>
+      <Source>WolfDeath.wav</Source>
+      <Name>WolfDeath</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\WolfDeath.xnb</Output>
+      <Time>2016-07-28T21:43:14.2113688+09:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <ContentProjectGUID Null="true" />

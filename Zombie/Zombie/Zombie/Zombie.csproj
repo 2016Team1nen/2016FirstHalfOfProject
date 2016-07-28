@@ -135,6 +135,8 @@
     <Compile Include="Sceen\ISceen.cs" />
     <Compile Include="Sceen\IsSceen.cs" />
     <Compile Include="Sceen\SceenManager.cs" />
+    <Compile Include="Sceen\Staffrole.cs" />
+    <Compile Include="Sceen\Start.cs" />
     <Compile Include="Sceen\Title.cs" />
     <Compile Include="Utility\Range.cs" />
     <Compile Include="Utility\Timer.cs" />

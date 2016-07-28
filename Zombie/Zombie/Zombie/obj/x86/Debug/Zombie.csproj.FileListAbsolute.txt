@@ -29,3 +29,44 @@ E:\NEEC\K016A1862\Denshi Enzan Club\2016FirstHalfOfProject\Zombie\Zombie\Zombie\
 E:\NEEC\K016A1862\Denshi Enzan Club\2016FirstHalfOfProject\Zombie\Zombie\Zombie\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 E:\NEEC\K016A1862\Denshi Enzan Club\2016FirstHalfOfProject\Zombie\Zombie\Zombie\obj\x86\Debug\Zombie.exe
 E:\NEEC\K016A1862\Denshi Enzan Club\2016FirstHalfOfProject\Zombie\Zombie\Zombie\obj\x86\Debug\Zombie.pdb
+D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\life.xnb
+D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\beam.xnb
+D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\ending.xnb
+D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\endingbgm.xnb
+D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\gameplaybgm.xnb
+D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\titlebgm.xnb
+D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\endingse.xnb
+D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\gameplayse.xnb
+D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\titlese.xnb
+D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\sky.xnb
+D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\block.xnb
+D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\title.xnb
+D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\goal.xnb
+D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\player.xnb
+D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\gamestart.xnb
+D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\enemyA.xnb
+D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\enemyB.xnb
+D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\start.xnb
+D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\gameclear.xnb
+D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\monsterA.xnb
+D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\monsterB.xnb
+D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\staffcredits.xnb
+D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\endingbgm.wma
+D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\gameplaybgm.wma
+D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\titlebgm.wma
+D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Zombie.exe
+D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Zombie.pdb
+D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\obj\x86\Debug\Zombie.csprojResolveAssemblyReference.cache
+D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\obj\x86\Debug\Zombie.exe
+D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\obj\x86\Debug\Zombie.pdb
+D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\HealLaserFX.xnb
+D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\BattleTheme.xnb
+D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\ClearFanfare.xnb
+D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\GameOverChords.xnb
+D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\BattleTheme.wma
+D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\ClearFanfare.wma
+D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\GameOverChords.wma
+D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\ShotgunFX.xnb
+D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\SludgeDeath.xnb
+D:\部活\2016FirstHalfOfProject\Zombie\Zombie\Zombie\bin\x86\Debug\Content\WolfDeath.xnb

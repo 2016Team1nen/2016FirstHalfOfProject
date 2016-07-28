@@ -59,7 +59,7 @@ namespace Zombie.Sceen
         }
         public void Update(GameTime gameTime)
         {
-            sound.PlayeBGM("gameplaybgm");
+            sound.PlayeBGM("BattleTheme");
             camera.Update(player.Position);
 
             //NextSceen判定
@@ -140,7 +140,9 @@ namespace Zombie.Sceen
                 bool isEnemy = isCollision.Update(player.Position, e.Position, player.Size, e.Size);
                 if (isEnemy)
                 {
-                    sound.PlaySE("gameplayse");
+                    if (e is EnemyA) { sound.PlaySE("SludgeDeath"); }
+                    if (e is EnemyB) { sound.PlaySE("WolfDeath"); }
+                    
                     player.Hp = player.Hp - 1;
                     e.Hp = e.Hp - 1;
                     player.IsEnemy(e.Position);
@@ -182,7 +184,8 @@ namespace Zombie.Sceen
                 //敵とプレーヤーのあたり判定
                 bool isEnemy = isCollision.Update(player.Position, m.Position, player.Size, m.Size);
                 if (isEnemy){
-                    sound.PlaySE("gameplayse");
+                    if (m is MonsterA) { sound.PlaySE("SludgeDeath"); }
+                    if (m is MonsterB) { sound.PlaySE("WolfDeath"); }
                     player.Hp = player.Hp - 1;
                     m.Hp = m.Hp - 1;
                     player.IsEnemy(m.Position);
@@ -191,11 +194,13 @@ namespace Zombie.Sceen
                 //敵と弾のあたり判定
                 foreach (var bL in beamL)
                 {
+                    if (m is MonsterA) { sound.PlaySE("SludgeDeath"); }
+                    if (m is MonsterB) { sound.PlaySE("WolfDeath"); }
                     if (bL.GetBeamType()) { continue; }
                     bool isBeamL = isCollision.Update(bL.Position, m.Position, bL.Size, m.Size);
-                    if (isBeamL)
-                    {
-                        sound.PlaySE("gameplayse");
+                    if (isBeamL){
+                        if (m is MonsterA) { sound.PlaySE("SludgeDeath"); }
+                        if (m is MonsterB) { sound.PlaySE("WolfDeath"); }
                         m.Hp = m.Hp - 1;
                         beamL.Remove(bL);
                         break;
@@ -206,7 +211,8 @@ namespace Zombie.Sceen
                     bool isBeamR = isCollision.Update(bR.Position, m.Position, bR.Size, m.Size);
                     if (isBeamR)
                     {
-                        sound.PlaySE("gameplayse");
+                        if (m is MonsterA) { sound.PlaySE("SludgeDeath"); }
+                        if (m is MonsterB) { sound.PlaySE("WolfDeath"); }
                         m.Hp = m.Hp - 1;
                         beamR.Remove(bR);
                         break;

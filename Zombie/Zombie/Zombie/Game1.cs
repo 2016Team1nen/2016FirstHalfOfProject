@@ -44,9 +44,11 @@ namespace Zombie
             ISceen gamePlay = new GamePlay(deviceManager);
             
             sceenManager.Add(Sceen.IsSceen.GAMEPLAY, gamePlay);
+            sceenManager.Add(Sceen.IsSceen.START, new Start(deviceManager));
+            sceenManager.Add(Sceen.IsSceen.STAFF, new Staffrole(deviceManager));
             sceenManager.Add(Sceen.IsSceen.CLEAR, new Clear(deviceManager));
             sceenManager.Add(Sceen.IsSceen.ENDING, new Ending(deviceManager));
-            sceenManager.Change(Sceen.IsSceen.TITLE);
+            sceenManager.Change(Sceen.IsSceen.START);
 
             base.Window.Title = "Zombie";
             base.Initialize();
@@ -73,15 +75,16 @@ namespace Zombie
             renderer.LoadTexture("gameclear");
 
             sound.LoadBGM("titlebgm");
-            sound.LoadBGM("gameplaybgm");
-            sound.LoadBGM("endingbgm");
+            sound.LoadBGM("BattleTheme");
+            sound.LoadBGM("ClearFanfare");
+            sound.LoadBGM("GameOverChords");
             sound.LoadSE("titlese");
             sound.LoadSE("gameplayse");
             sound.LoadSE("endingse");
-            //sound.LoadSE("HealLaserFX");
-            //sound.LoadSE("ShotgunFX");
-            //sound.LoadSE("SludgeDeath");
-            //sound.LoadSE("WolfDeath");
+            sound.LoadSE("HealLaserFX");
+            sound.LoadSE("ShotgunFX");
+            sound.LoadSE("SludgeDeath");
+            sound.LoadSE("WolfDeath");
 
             // TODO: use this.Content to load your game content here
         }

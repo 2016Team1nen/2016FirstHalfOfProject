@@ -16,17 +16,19 @@ namespace Zombie.Sceen
         private Select select;
         private int s;
         private bool a;
-        int x = 400, y = 490;
+        private int x = 400, y = 490;
+        private IsSceen next;
 
         public Title(DeviceManager deviceManager) {
             input = deviceManager.GetInputState();
             sound = deviceManager.GetSound();
             select = deviceManager.GetSelect();
-            isEnd = false;
             a = true;
+            Initialize();
         }
 
         public void Initialize() {
+            next = IsSceen.GAMEPLAY;
             isEnd = false;
         }
 
@@ -35,8 +37,9 @@ namespace Zombie.Sceen
             select.SelectT();
             s = select.GetSelect();
             input.UpdateKey(Keyboard.GetState());
-            if (input.IsKeyDown(Keys.Enter) && s == 0) {
+            if (input.IsKeyDown(Keys.Enter)) {
                 sound.PlaySE("titlese");
+                if(s == 1){ next = IsSceen.STAFF; }
                 sound.StopBGM();
                 isEnd = true;
             }
@@ -71,9 +74,7 @@ namespace Zombie.Sceen
             return isEnd;
         }
         public IsSceen Next() {
-            Initialize();
-            return IsSceen.GAMEPLAY;
+            return next;
         }
-
     }
 }
