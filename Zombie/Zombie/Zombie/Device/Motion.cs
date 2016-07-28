@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+
 using Microsoft.Xna.Framework;
 using Zombie.Device;
 using Zombie.Utility;
@@ -10,6 +11,7 @@ namespace Zombie.Device
 {
     class Motion
     {
+
         private Range range;
         private Timer timer;
         private int motionNumber;
@@ -49,6 +51,5 @@ namespace Zombie.Device
         }
 
         public Rectangle DrawingRange() { return rectangles[motionNumber]; }
-
     }
 }

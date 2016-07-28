@@ -6,14 +6,14 @@ using Microsoft.Xna.Framework;
 
 namespace Zombie.Active
 {
-    class Beam:Character
+    class Beam:ActorObject
     {
         private float start;    //発射した時のX座標
         private int rl;            //プレイヤーの向き
         private bool beamType;
 
-        public Beam(string name, int hp, Vector2 position, Vector2 size, Vector2 velocity, bool beamType, int rl)
-            :base(name,hp,position,size,velocity)
+        public Beam(string name, Vector2 position, Vector2 size, Vector2 velocity, bool beamType, int rl)
+            :base(name, position, velocity, size)
         {
             this.rl = rl;
             this.beamType = beamType;

@@ -7,18 +7,14 @@ using Microsoft.Xna.Framework.Input;
 
 namespace Zombie
 {
-    abstract class Character
+    abstract class Character : ActorObject
     {
-        protected string name;
+        //protected string name;
         protected int hp;
-        protected Vector2 position;
-        protected Vector2 velocity;
-        protected Vector2 size;
-        protected float alpha;
 
         protected bool isblock;
 
-        public Character(string name, int hp, Vector2 position, Vector2 size, Vector2 velocity) {
+        public Character(string name, int hp, Vector2 position, Vector2 size, Vector2 velocity):base(name, position, velocity, size) {
             this.name = name;
             this.hp = hp;
             this.position = position;
@@ -28,7 +24,7 @@ namespace Zombie
             alpha = 1.0f;
         }
 
-        public abstract void Update(GameTime gameTime);
+        //public abstract void Update(GameTime gameTime);
         protected void Falling() { velocity.Y += 1.0f; }
 
         public void IsBlock(Vector2 blockPosition, Vector2 bSize, bool isBlock)
@@ -83,17 +79,12 @@ namespace Zombie
         //Get,Set
         public string GetName() { return name; }
 
+
         public int Hp { 
             get { return hp; }
             set { hp = value; }
         }
 
-        public Vector2 Position { 
-            get { return position; }
-            set { position = value; }
-        }
-        public Vector2 Velocity { get { return velocity; } }
-        public Vector2 Size { get { return size; } }
         public float Alpha { 
             get { return alpha; }
             set { alpha = value; }
@@ -101,8 +92,8 @@ namespace Zombie
 
         ////////////////////////////////////////////
 
-        //Draw
-        public virtual void Draw(Renderer renderer) { renderer.DrawTextureW(name, position, alpha); }
+        ////Draw
+        //public virtual void Draw(Renderer renderer) { renderer.DrawTextureW(name, position, alpha); }
 
         //RefPosition、実装していない
         public void SetPosition(ref Vector2 other) { other = position; }

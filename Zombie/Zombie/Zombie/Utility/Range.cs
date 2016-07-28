@@ -10,6 +10,7 @@ namespace Zombie.Utility
         private int first;
         private int end;
 
+
         public Range(int first, int end) {
             this.first = first;
             this.end = end;

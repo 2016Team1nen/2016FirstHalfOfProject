@@ -98,12 +98,13 @@ namespace Zombie
             if (input.IsKeyDown(Keys.Space)) {
                 Timer timer = new Timer(1.0f);
                 if (rl > 0) {
-                    beamR.Add(new Beam("beam", 1, (position + new Vector2(size.X,50)), new Vector2(32, 32), Vector2.Zero, beamType, rl));
+
+                    beamR.Add(new Beam("beam", (position + new Vector2(size.X,50)), new Vector2(32, 32), Vector2.Zero, beamType, rl));
                     if (beamType && velocity.X == 0) { motion.Initialize(new Range(13, 13), timer); }
                     if (!beamType && velocity.X == 0) { motion.Initialize(new Range(12, 12), timer); }
                 }
                 else if (rl < 0){
-                    beamL.Add(new Beam("beam", 1, (position + new Vector2(-16, 50)), new Vector2(32, 32), Vector2.Zero, beamType, rl));
+                    beamL.Add(new Beam("beam", (position + new Vector2(-16, 50)), new Vector2(32, 32), Vector2.Zero, beamType, rl));
                     sound.PlaySE("gameplayse");
                     if (beamType && velocity.X == 0) { motion.Initialize(new Range(10, 10), timer); }
                     if (!beamType && velocity.X == 0) { motion.Initialize(new Range(11, 11), timer); }

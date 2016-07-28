@@ -108,6 +108,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Active\ActorObject.cs" />
     <Compile Include="Active\Beam.cs" />
     <Compile Include="Active\EnemyB.cs" />
     <Compile Include="Active\MonsterA.cs" />
